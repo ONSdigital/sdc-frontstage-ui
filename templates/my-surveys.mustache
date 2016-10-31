@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My surveys</title>
+  </head>
+  <body>
+    <h1>My surveys</h1>
+    <table>
+      <tr>
+        <th>Reporting unit name</th><th>Reporting unit ref</th><th>Survey</th><th>Period</th><th>Status</th><th>Return By</th>
+      </tr>
+      {{ #surveys }}
+        <tr>
+          <td>{{ ru_name }}</td><td>{{ ru_ref }}</td><td>{{ survey }}</td><td>{{ period }}</td><td>{{ status }}</td><td>{{ return_by }}</td>
+        </tr>
+      {{ /surveys }}
+    </table>
+  </body>
+</html>
