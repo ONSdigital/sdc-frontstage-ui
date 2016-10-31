@@ -1,0 +1,23 @@
+{
+  "name": "sdc-frontstage-ui",
+  "version": "0.0.0",
+  "description": "Front stage UI for external ONS customers",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ONSdigital/sdc-frontstage-ui.git"
+  },
+  "author": "Shane Edwards",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ONSdigital/sdc-frontstage-ui/issues"
+  },
+  "homepage": "https://github.com/ONSdigital/sdc-frontstage-ui#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  }
+}

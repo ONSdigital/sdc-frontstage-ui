@@ -1,0 +1,79 @@
+body {
+    background-color : #eee;
+}
+
+.main-logo-container {
+    padding : 15px 0;
+    background-color : #fff;
+}
+
+.main-logo {
+    height : 39px;
+}
+
+.page-content {
+    margin-top : 2em;
+    padding : 1.5em;
+    background-color : #fff;
+
+    > h3 {
+        margin-top : 0;
+        margin-bottom : .8em;
+        padding-bottom : .8em;
+        font-weight : normal;
+        border-bottom : 1px solid #ccc;
+    }
+}
+
+.form-container {
+
+    .field-list {
+        padding : 0;
+        list-style-type : none;
+
+        .title {
+            margin-top : 1.5em;
+        }
+
+        .link {
+            display : inline-block;
+            margin-top : .5em;
+        }
+    }
+
+    .actions {
+        margin-top : 1.5em;
+    }
+}
+
+.survey-list {
+
+    > h4 {
+        color : #3b7a9e;
+    }
+
+    + .survey-list {
+        margin-top : 2em;
+    }
+
+    table.survey-list-table {
+        width : 100%;
+        border : 1px solid #eee;
+
+        th, td {
+            padding : .5em;
+        }
+
+        td {
+            border : 1px solid #eee;
+        }
+
+        td:last-child {
+            width : 20px;
+        }
+
+        > thead {
+            background-color : #eee;
+        }
+    }
+}
