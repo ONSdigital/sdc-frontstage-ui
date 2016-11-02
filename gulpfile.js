@@ -4,31 +4,46 @@ var gulp = require('gulp'),
 	livereload = require('gulp-livereload'),
 	mustache = require('gulp-mustache'),
 
+	fs = require('fs'),
+
 	config = {
 		sassSrc: './sass/*.scss',
-		templatesSrc: ['./templates/**/*.mustache', './mock-pages/**/*.html'],
-		outputDir: './dist'
+		templatesSrc: [
+			'./mock-pages/**/*.json',
+			'./templates/**/*.mustache',
+			'./mock-pages/**/*.html'
+		],
+		outputDir: './dist',
+		templatesArr: fs.readdirSync('./mock-pages/src')
 	};
 
 
-gulp.task('compile:templates', () => {
-	return gulp.src('./mock-pages/src/**/*.html')
-		.pipe(mustache({
-			title: 'Log in to your account'
-		}))
-		.pipe(gulp.dest('./mock-pages/dist'));
+config.templatesArr.forEach(file => {
+
+	var page = file.replace('.html', '');
+
+	console.log(page, file);
+
+	gulp.task('compile:templates:' + page, () => {
+		return gulp.src('./mock-pages/src/' + file)
+			.pipe(mustache('./mock-pages/fixtures/' + page + '.json'))
+			.pipe(gulp.dest('./mock-pages/dist'));
+
+	});
 });
 
 gulp.task('compile:sass', () => {
 	return gulp.src(config.sassSrc)
 		.pipe(sass())
-		//.pipe(concat('site.min.css'))
+		.pipe(concat('site.min.css'))
 		.pipe(gulp.dest(config.outputDir))
 		.pipe(livereload());
 });
 
-gulp.task('watch:templates', () => {
-	gulp.watch(config.templatesSrc, ['compile:templates']);
+var templateTasks = config.templatesArr.map(page => 'compile:templates:' + page.replace('.html', ''));
+
+gulp.task('watch:templates', templateTasks, () => {
+	gulp.watch(config.templatesSrc, templateTasks);
 });
 
 gulp.task('watch:compile:sass', ['compile:sass'], () => {
@@ -39,7 +54,6 @@ gulp.task('watch:compile:sass', ['compile:sass'], () => {
 
 gulp.task('dev', [
 	'compile:sass',
-	'compile:templates',
 	'watch:compile:sass',
 	'watch:templates'
 ], () => {

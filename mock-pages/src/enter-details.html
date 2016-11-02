@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Confirm organisation and survey</title>
     {{> ../../templates/head-dependencies}}
 </head>
 <body>
@@ -16,19 +16,23 @@
 
                 {{> ../../templates/page-header}}
 
-                <p>If you don't have an account, you can use your enrolment code to set one up.</p>
-
                 <div class="form-container">
-                    <form action="confirm-organisation.html">
+                    <form action="myaccount.html">
                         <ul class="field-list">
                             <li>
-                                <h5 class="title">Enrolment code</h5>
-                                <p>You'll find this in the letter we sent you</p>
+                                <h5 class="title">Email address</h5>
                                 <input type="text" />
+                            </li>
+                            <li>
+                                <h5 class="title">Password</h5>
+                                <input type="text" />
+                            </li>
+                            <li>
+                                <a class="link" href="">Forgot password?</a>
                             </li>
                         </ul>
                         <div class="actions">
-                            <input class="btn btn-primary" value="Continue" type="submit" />
+                            <input class="btn btn-primary" value="Log In" type="submit" />
                         </div>
                     </form>
                 </div>

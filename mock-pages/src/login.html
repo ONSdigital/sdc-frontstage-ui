@@ -3,26 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
-    <link href="../../dist/sdc-frontstage-ui.css" type="text/css" rel="stylesheet" />
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    {{> ../../templates/head-dependencies}}
 </head>
 <body>
     <div class="page">
 
-        <div class="main-logo-container">
-            <div class="container">
-                <img class="main-logo" src="https://www.ons.gov.uk//assets/img/ons-logo.svg" alt="Office for National Statistics">
-            </div>
-        </div>
+        {{> ../../templates/header}}
 
         <div class="container">
 
             <div class="page-content">
 
-                <h3>Log in to your account</h3>
+                {{> ../../templates/page-header}}
 
                 <div class="form-container">
                     <form action="myaccount.html">
