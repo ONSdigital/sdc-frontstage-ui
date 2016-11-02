@@ -28,17 +28,32 @@ body {
 
 .form-container {
 
+    h3 {
+        font-size : 2rem;
+    }
+
     .field-list {
         padding : 0;
         list-style-type : none;
 
         .title {
+            display : block;
             margin-top : 1.5em;
+            font-weight : normal;
         }
 
         .link {
             display : inline-block;
             margin-top : .5em;
+        }
+
+        + h3 {
+            margin-top : 2em;
+        }
+
+        input[type=text] {
+            padding : .6rem;
+            width : 30rem;
         }
 
         .field-item {
@@ -50,13 +65,14 @@ body {
                 border-width: 1px;
             }
 
-            .field-item-radio {
+            .field-item-radio,
+            .field-item-checkbox {
                 background: #eee none repeat scroll 0 0;
                 cursor: pointer;
                 display: inline-block;
                 float: left;
                 font-size: 1rem;
-                margin: 1.4rem;
+                margin: 1.6rem .5rem 1.6rem 1.4rem;
                 position: relative;
                 transition: background 300ms ease 0s;
                 vertical-align: middle;
@@ -122,4 +138,9 @@ body {
     > li {
         margin-bottom : 1em;
     }
+}
+
+.footer {
+    padding : 1.5em;
+    font-size : 14px;
 }

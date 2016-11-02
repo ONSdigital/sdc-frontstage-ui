@@ -22,8 +22,6 @@ config.templatesArr.forEach(file => {
 
 	var page = file.replace('.html', '');
 
-	console.log(page, file);
-
 	gulp.task('compile:templates:' + page, () => {
 		return gulp.src('./mock-pages/src/' + file)
 			.pipe(mustache('./mock-pages/fixtures/' + page + '.json'))

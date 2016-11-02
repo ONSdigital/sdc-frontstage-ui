@@ -17,22 +17,69 @@
                 {{> ../../templates/page-header}}
 
                 <div class="form-container">
-                    <form action="myaccount.html">
+                    <form action="check-email.html">
+
+                        <h3>Your name</h3>
                         <ul class="field-list">
                             <li>
-                                <h5 class="title">Email address</h5>
+                                <label class="title">First name</label>
                                 <input type="text" />
                             </li>
                             <li>
-                                <h5 class="title">Password</h5>
+                                <label class="title">Last name</label>
                                 <input type="text" />
-                            </li>
-                            <li>
-                                <a class="link" href="">Forgot password?</a>
                             </li>
                         </ul>
+
+                        <h3>Your name</h3>
+                        <p>We'll send you an email so you can activate your account.</p>
+                        <ul class="field-list">
+                            <li>
+                                <label class="title">Enter your email address</label>
+                                <input type="text" />
+                            </li>
+                            <li>
+                                <label class="title">Re-type your email address</label>
+                                <input type="text" />
+                            </li>
+                        </ul>
+
+                        <h3>Create a password</h3>
+                        <p>Your password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters.</p>
+                        <ul class="field-list">
+                            <li>
+                                <label class="title">Create a password</label>
+                                <input type="text" />
+                            </li>
+                            <li>
+                                <label class="title">Re-type your password</label>
+                                <input type="text" />
+                            </li>
+                        </ul>
+
+                        <h3>Phone number</h3>
+                        <p>We may sometimes need to call you to discuss information you have provided.</p>
+                        <ul class="field-list">
+                            <li>
+                                <label class="title">Enter your phone number</label>
+                                <input type="text" />
+                            </li>
+                        </ul>
+
+                        <h3>Terms and Conditions</h3>
+                        <ul class="field-list">
+                            <li>
+                                <div class="field-item">
+                                    <input class="field-item-checkbox" title="Owner or partner" value="terms" type="checkbox" id="terms">
+                                    <label class="field-item-label" for="terms">
+                                        <span class="field-item-label-inner">Please confirm you accept our Terms and Conditions (Opens in a new window.)</span>
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+
                         <div class="actions">
-                            <input class="btn btn-primary" value="Log In" type="submit" />
+                            <input class="btn btn-primary" value="Continue" type="submit" />
                         </div>
                     </form>
                 </div>

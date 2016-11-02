@@ -20,27 +20,38 @@ body {
     font-weight: normal;
     border-bottom: 1px solid #ccc; }
 
+.form-container h3 {
+  font-size: 2rem; }
+
 .form-container .field-list {
   padding: 0;
   list-style-type: none; }
   .form-container .field-list .title {
-    margin-top: 1.5em; }
+    display: block;
+    margin-top: 1.5em;
+    font-weight: normal; }
   .form-container .field-list .link {
     display: inline-block;
     margin-top: .5em; }
+  .form-container .field-list + h3 {
+    margin-top: 2em; }
+  .form-container .field-list input[type=text] {
+    padding: .6rem;
+    width: 30rem; }
   .form-container .field-list .field-item {
     margin-bottom: 10px; }
     .form-container .field-list .field-item *:checked + .field-item-label {
       background-color: #fff;
       border-color: #222;
       border-width: 1px; }
-    .form-container .field-list .field-item .field-item-radio {
+    .form-container .field-list .field-item .field-item-radio,
+    .form-container .field-list .field-item .field-item-checkbox {
       background: #eee none repeat scroll 0 0;
       cursor: pointer;
       display: inline-block;
       float: left;
       font-size: 1rem;
-      margin: 1.4rem;
+      margin: 1.6rem .5rem 1.6rem 1.4rem;
       position: relative;
       transition: background 300ms ease 0s;
       vertical-align: middle;
@@ -81,3 +92,7 @@ body {
   list-style-type: none; }
   .details-list > li {
     margin-bottom: 1em; }
+
+.footer {
+  padding: 1.5em;
+  font-size: 14px; }
