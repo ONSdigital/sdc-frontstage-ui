@@ -1,7 +1,6 @@
 var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	concat = require('gulp-concat'),
-	livereload = require('gulp-livereload'),
 	mustache = require('gulp-mustache'),
 
 	fs = require('fs'),
@@ -35,7 +34,6 @@ gulp.task('compile:sass', () => {
 		.pipe(sass())
 		.pipe(concat('site.min.css'))
 		.pipe(gulp.dest(config.outputDir))
-		.pipe(livereload());
 });
 
 var templateTasks = config.templatesArr.map(page => 'compile:templates:' + page.replace('.html', ''));
@@ -55,5 +53,5 @@ gulp.task('dev', [
 	'watch:compile:sass',
 	'watch:templates'
 ], () => {
-	livereload.listen();
+
 });
