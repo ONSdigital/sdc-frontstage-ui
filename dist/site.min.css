@@ -40,7 +40,7 @@ body {
     width: 30rem;
     border: 1px solid #ccc; }
   .form-container .field-list .field-item {
-    margin-bottom: 10px; }
+    margin-bottom: 15px; }
     .form-container .field-list .field-item *:checked + .field-item-label {
       background-color: #fff;
       border-color: #222;
