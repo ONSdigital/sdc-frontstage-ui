@@ -25,17 +25,32 @@
 
             <div class="page-content">
 
-    <h1>My surveys</h1>
-    <table>
-      <tr>
-        <th>Reporting unit name</th><th>Reporting unit ref</th><th>Survey</th><th>Period</th><th>Status</th><th>Return By</th>
-      </tr>
-      {{ #surveys }}
-        <tr>
-          <td>{{ ru_name }}</td><td>{{ ru_ref }}</td><td>{{ survey }}</td><td>{{ period }}</td><td>{{ status }}</td><td>{{ return_by }}</td>
-        </tr>
-      {{ /surveys }}
-    </table>
+<h3>Log in to your account</h3>
+                <div class="form-container">
+                    <form action="login" method="post">
+                        {{ #messages }}
+                            <div style="color: red">{{ . }}</div>
+                        {{ /messages }}
+                        <ul class="field-list">
+                            <li>
+                                <label class="title">Email address</label>
+                                <input name="email_address" type="text" />
+                            </li>
+                            <li>
+                                <label class="title">Password</label>
+                                <input name="password" type="text" />
+                            </li>
+                            <li>
+                                <a class="link" href="">Forgot password?</a>
+                            </li>
+                        </ul>
+                        <div class="actions">
+                            <input class="btn btn-primary" value="Log In" type="submit" />
+                        </div>
+                    </form>
+                </div>
+
+            </div>
 
 <div class="footer">
     <p>This service is a beta version, which means it is a trial service. <a href="">Find out more.</a></p>
