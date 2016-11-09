@@ -7,7 +7,14 @@
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script></head>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+th, td {margin:20px; padding: 20px; align: left; font-weight: normal; font-size: 1.4em;}
+th {font-weight: 600;}
+</style>
+
+</head>
 <body>
     <div class="page">
 
@@ -32,7 +39,7 @@
       </tr>
       {{ #surveys }}
         <tr>
-          <td>{{ ru_name }}</td><td>{{ ru_ref }}</td><td>{{ survey }}</td><td>{{ period }}</td><td>{{ status }}</td><td>{{ return_by }}</td>
+          <td>{{ reporting_unit_name }}</td><td>{{ reporting_unit }}</td><td>{{ name }}</td><td>{{ period }}</td><td>STATUS</td><td>RETURN BY</td>
         </tr>
       {{ /surveys }}
     </table>

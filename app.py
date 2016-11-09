@@ -36,8 +36,6 @@ def get_login_token_and_data(email_address: str, password: str) -> Tuple[str, st
 def get_organisations_token_and_data(login_token: str) -> Tuple[str, str]:
     # call sdc-organisations - which returns a token to be used in subsequent call
     response = requests.get(ORGANISATION_HOST + '/reporting_units', headers={'token': login_token})
-    import pdb;pdb.set_trace()
-    reporting_unit_ref = response.json().get('data', {}).get('organisation', {}).get('reference')
     return response.json().get('token'), response.json().get('data')
 
 
@@ -86,34 +84,16 @@ def logout_page() -> Response:
 
 
 @app.route('/my-surveys', methods=['GET'])
-def my_surveys():
-    surveys = [
-        {
-            'ru_name':   'Treacherous Trees',
-            'ru_ref':    '239592852',
-            'survey':    'Annual Purchases Survey',
-            'period':    '2015-08',
-            'status':    'not_started',
-            'return_by': '2015-07-31',
-        },
-        {
-            'ru_name':   'Treacherous Trees',
-            'ru_ref':    '239592852',
-            'survey':    'Financial Institutions Register Survey',
-            'period':    '2015-08',
-            'status':    'not_started',
-            'return_by': '2015-07-31',
-        },
-        {
-            'ru_name':   'Tesco',
-            'ru_ref':    '032759874',
-            'survey':    'Monthly Wages and Salaries Survey',
-            'period':    '2015-08',
-            'status':    'not_started',
-            'return_by': '2015-07-31',
-        },
-    ]
-    return render_mustache('my-surveys', surveys=surveys)
+@login_required
+def get_my_surveys_endpoint() -> Response:
+    # display the surveys
+    organisation_token = session.get('organisation_token')
+    #organisation_token = request.headers.get('token')
+    reporting_unit_ref = session.get('data', {}).get('reporting_units', [{}])[0].get('organisation', {}).get('reference')
+    _, data = get_questionnaires_token_and_data(organisation_token, reporting_unit_ref)
+    surveys = data.get('surveys') or []
+    user_name = session.get('data', {}).get('name')
+    return render_mustache('my-surveys', surveys=surveys, user_name=user_name)
 
 
 # quick hack to serve the CSS file
@@ -127,5 +107,5 @@ def css_endpoint() -> Response:
 
 if __name__ == '__main__':
     app.config['SECRET_KEY'] = 'ITSASECRET'
-    port = int(os.environ.get('PORT', 5000))
+    port = int(os.environ.get('PORT', 5002))
     app.run(debug=True, host='0.0.0.0', port=port)
