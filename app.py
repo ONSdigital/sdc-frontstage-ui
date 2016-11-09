@@ -16,6 +16,12 @@ ORGANISATION_HOST           = os.getenv('ORGANISATION_HOST',           'http://0
 QUESTIONNAIRE_RESPONSE_HOST = os.getenv('QUESTIONNAIRE_RESPONSE_HOST', 'http://0.0.0.0:5006')
 
 
+@app.errorhandler(401)
+def unauthorised(e: Exception) -> Response:
+    body = "The server couldn't verify that you are authorised to access the URL requested."
+    return render_mustache('error', title='401 - Unauthorised', body=body)
+
+
 def login_required(func: Callable) -> Callable:
     """Decorator used to prevent access to endpoints by unauthorised users"""
     @wraps(func)
