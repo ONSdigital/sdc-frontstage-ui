@@ -17,7 +17,8 @@
     "url": "https://github.com/ONSdigital/sdc-frontstage-ui/issues"
   },
   "homepage": "https://github.com/ONSdigital/sdc-frontstage-ui#readme",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
     "gulp": "^3.9.1",
     "gulp-mustache": "^2.3.0",
     "gulp-sass": "^2.3.2"
