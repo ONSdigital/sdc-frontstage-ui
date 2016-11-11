@@ -18,7 +18,7 @@ var gulp = require('gulp'),
 		templatesArr: fs.readdirSync('./mock-pages/src')
 	};
 
-var portNumber = argv.port || 8080;
+var portNumber = argv.port || process.env.PORT || 8080;
 
 config.templatesArr.forEach(file => {
 
