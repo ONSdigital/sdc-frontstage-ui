@@ -50,12 +50,11 @@ gulp.task('watch:compile:sass', ['compile:sass'], () => {
 });
 
 gulp.task('webserver', () => {
-	gulp.src('./')
+	gulp.src('./mock-pages/dist/')
 		.pipe(webserver({
 			//livereload: true,
 			//directoryListing: true,
 			//open: true,
-			fallback: 'index.html',
 			port: portNumber
 		}));
 });
