@@ -57,7 +57,7 @@ gulp.task('webserver', () => {
 			//livereload: true,
 			//directoryListing: true,
 			//open: true,
-			host: '0.0.0.0',
+			host: (process.env.NODE_ENV === 'production' ? '0.0.0.0' : 'localhost'),
 			port: portNumber
 		}));
 });
@@ -72,7 +72,8 @@ gulp.task('test', [
 gulp.task('dev', [
 	'compile:sass',
 	'watch:compile:sass',
-	'watch:templates'
+	'watch:templates',
+	'webserver'
 ], () => {
 
 });
