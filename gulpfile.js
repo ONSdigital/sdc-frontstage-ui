@@ -18,7 +18,7 @@ var gulp = require('gulp'),
 		templatesArr: fs.readdirSync('./mock-pages/src')
 	};
 
-var portNumber = process.env.PORT || argv.port || 8080;
+var portNumber = process.env.PORT || argv.port || 8181;
 
 config.templatesArr.forEach(file => {
 
@@ -52,14 +52,17 @@ gulp.task('watch:compile:sass', ['compile:sass'], () => {
 gulp.task('webserver', () => {
 	console.log('Using port:' + portNumber);
 
-	gulp.src('./mock-pages/dist/')
-		.pipe(webserver({
-			//livereload: true,
-			//directoryListing: true,
-			//open: true,
-			host: (process.env.NODE_ENV === 'production' ? '0.0.0.0' : 'localhost'),
-			port: portNumber
-		}));
+	gulp.src([
+		'./mock-pages/dist/',
+		'./dist/'
+	])
+	.pipe(webserver({
+		//livereload: true,
+		//directoryListing: true,
+		//open: true,
+		host: (process.env.NODE_ENV === 'production' ? '0.0.0.0' : 'localhost'),
+		port: portNumber
+	}));
 });
 
 
