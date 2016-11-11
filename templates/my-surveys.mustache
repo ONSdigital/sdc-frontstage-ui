@@ -43,27 +43,36 @@
 
             <div class="page-content">
 
-                <h1>My surveys</h1>
-                <table>
-                    <tr>
-                        <th>Reporting unit name</th>
-                        <th>Reporting unit ref</th>
-                        <th>Survey</th>
-                        <th>Period</th>
-                        <th>Status</th>
-                        <th>Return By</th>
-                    </tr>
-                    {{#surveys}}
-                        <tr>
-                            <td>{{ reporting_unit_name }}</td>
-                            <td>{{ reporting_unit }}</td>
-                            <td>{{ name }}</td>
-                            <td>{{ period }}</td>
-                            <td>STATUS</td>
-                            <td>RETURN BY</td>
-                        </tr>
-                    {{/surveys}}
-                </table>
+                <div class="survey-list">
+                    <h4>My surveys</h4>
+                    <table class="survey-list-table">
+                        <thead>
+                            <tr>
+                                <th>Reporting unit name</th>
+                                <th>Reporting unit ref</th>
+                                <th>Survey</th>
+                                <th>Period</th>
+                                <th>Status</th>
+                                <th>Return By</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Use survey-list.mustache -->
+                            {{#surveys}}
+                                <tr>
+                                    <td>{{ reporting_unit_name }}</td>
+                                    <td>{{ reporting_unit }}</td>
+                                    <td>{{ name }}</td>
+                                    <td>{{ period }}</td>
+                                    <td>STATUS</td>
+                                    <td>RETURN BY</td>
+                                    <td><a href="" class="btn btn-info">Start</a></td>
+                                </tr>
+                            {{/surveys}}
+                        </tbody>
+                    </table>
+                </div>
 
                 <div class="footer">
                     <p>This service is a beta version, which means it is a trial service. <a href="">Find out more.</a></p>
