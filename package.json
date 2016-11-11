@@ -4,7 +4,8 @@
   "description": "Front stage UI for external ONS customers",
   "main": "index.js",
   "scripts": {
-    "test": ""
+    "test": "",
+    "start": ""
   },
   "repository": {
     "type": "git",
