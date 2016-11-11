@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "",
-    "start": "gulp heroku"
+    "start": "gulp test"
   },
   "repository": {
     "type": "git",

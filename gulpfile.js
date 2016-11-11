@@ -61,7 +61,7 @@ gulp.task('webserver', () => {
 });
 
 
-gulp.task('heroku', [
+gulp.task('test', [
 	'webserver'
 ], () => {
 
