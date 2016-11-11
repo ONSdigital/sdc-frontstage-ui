@@ -2,6 +2,7 @@ var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	concat = require('gulp-concat'),
 	mustache = require('gulp-mustache'),
+	webserver = require('gulp-webserver'),
 
 	fs = require('fs'),
 
@@ -16,6 +17,7 @@ var gulp = require('gulp'),
 		templatesArr: fs.readdirSync('./mock-pages/src')
 	};
 
+var portNumber = argv.port || 8080;
 
 config.templatesArr.forEach(file => {
 
@@ -46,7 +48,23 @@ gulp.task('watch:compile:sass', ['compile:sass'], () => {
 	gulp.watch(config.sassSrc, ['compile:sass']);
 });
 
+gulp.task('webserver', () => {
+	gulp.src('./')
+		.pipe(webserver({
+			//livereload: true,
+			//directoryListing: true,
+			//open: true,
+			fallback: 'index.html',
+			port: portNumber
+		}));
+});
 
+
+gulp.task('heroku', [
+	'webserver'
+], () => {
+
+});
 
 gulp.task('dev', [
 	'compile:sass',
