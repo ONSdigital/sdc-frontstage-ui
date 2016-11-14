@@ -101,6 +101,7 @@ body {
 }
 
 .survey-list {
+    margin-top : 20px;
 
     > h4 {
         color : #3b7a9e;
@@ -113,13 +114,21 @@ body {
     table.survey-list-table {
         width : 100%;
         border : 1px solid #eee;
+        border-left : none;
+        border-right : none;
 
         th, td {
             padding : .5em;
         }
 
+        th {
+            font-weight : 500;
+        }
+
         td {
             border : 1px solid #eee;
+            border-left : none;
+            border-right : none;
         }
 
         td:last-child {
@@ -129,6 +138,20 @@ body {
         > thead {
             background-color : #eee;
         }
+    }
+}
+
+.survey-list-actions {
+    margin-top : 20px;
+}
+
+
+.respondant-settings {
+    float : right;
+
+    .dropdown-menu {
+        right : 0;
+        left : auto;
     }
 }
 

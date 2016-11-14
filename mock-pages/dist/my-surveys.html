@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>My surveys</title><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+<title>My Surveys</title><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
 <link href="/site.min.css" type="text/css" rel="stylesheet" />
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
@@ -16,70 +16,77 @@
         <a href="/mock-pages/dist/">
             <img class="main-logo" src="https://www.ons.gov.uk//assets/img/ons-logo.svg" alt="Office for National Statistics">
         </a>
+
+        <div class="respondant-settings">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default">Settings</button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false"><span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Your profile</a></li>
+                    <li><a href="#">Change password</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
         <div class="container">
 
             <div class="page-content">
 
-<h3>My surveys</h3>
+<h3>My Surveys</h3>
                 <!-- Content -->
+<ul class="nav nav-tabs">
+    <li class="active" role="presentation">
+        <a href="#">
+            To do
+        </a>
+    </li>
+    <li role="presentation">
+        <a href="#">
+            History
+        </a>
+    </li>
+</ul>
 
 <div class="survey-list">
-    <h4>Treacherous Trees <small>(TRADING NAME)</small></h4>
-    <p>Ref: 239592852</p>
+    <h5>Bolts and Ratchets Ltd [Reference no. 243957812]</h5>
     <table class="survey-list-table">
         <thead>
             <tr>
                 <th>Survey</th>
-                <th>Period</th>
+                <th></th>
+                <th>Reporting period</th>
+                <th>Due date</th>
                 <th>Status</th>
-                <th>Return By</th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>Annual Purchases Survey</td>
+                <td><a class="btn btn-default" href="#">Info</a></td>
                 <td>August 2015</td>
-                <td>Not Started</td>
                 <td>31 Jul 15</td>
-                <td><a href="" class="btn btn-info">Start</a></td>
+                <td>Not Started</td>
+                <td><a class="btn btn-primary" href="#">Start survey</a></td>
             </tr>
             <tr>
                 <td>Financial Institutions Register Survey</td>
+                <td><a class="btn btn-default" href="#">Info</a></td>
                 <td>August 2015</td>
-                <td>Not Started</td>
                 <td>31 Jul 15</td>
-                <td><a href="" class="btn btn-info">Start</a></td>
+                <td>Not Started</td>
+                <td><a class="btn btn-primary" href="#">Start survey</a></td>
             </tr>
         </tbody>
     </table>
 </div>
 
-<div class="survey-list">
-    <h4>Tesco <small>(TRADING NAME)</small></h4>
-    <p>Ref: 032759874</p>
-    <table class="survey-list-table">
-        <thead>
-            <tr>
-                <th>Survey</th>
-                <th>Period</th>
-                <th>Status</th>
-                <th>Return By</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Monthly Wages and Salaries Survey</td>
-                <td>August 2015</td>
-                <td>Not Started</td>
-                <td>31 Jul 15</td>
-                <td><a href="" class="btn btn-info">Start</a></td>
-            </tr>
-        </tbody>
-    </table>
+<div class="survey-list-actions">
+    <a class="btn btn-default" href="">Add new survey</a>
 </div>                <!-- End Content -->
 
             </div>
