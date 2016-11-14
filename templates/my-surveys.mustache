@@ -58,7 +58,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Use survey-list.mustache -->
                             {{#surveys}}
                                 <tr>
                                     <td>{{ reporting_unit_name }}</td>
@@ -74,12 +73,7 @@
                     </table>
                 </div>
 
-                <div class="footer">
-                    <p>This service is a beta version, which means it is a trial service. <a href="">Find out more.</a></p>
-                    <p><a href="">Terms of Use</a> <a href="">Privacy Policy</a> <a href="">Copyright</a></p>
-                    <p><a href="">Office for National Statistics Main Page</a> <a href="">National Statistics Publication
-                        Hub</a> <a href="">United Kingdom Statistics Authority</a></p>
-                </div>
+                {{> partials/footer}}
             </div>
 
         </div>

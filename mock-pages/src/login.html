@@ -1,48 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {{> ../../templates/head-misc}}
-    {{> ../../templates/head-dependencies}}
-</head>
-<body>
-    <div class="page">
+{{> ../../templates/page-header}}
 
-        {{> ../../templates/header}}
-
-        <div class="container">
-
-            <div class="page-content">
-
-                {{> ../../templates/page-header}}
-
-                <div class="form-container">
-                    <form action="my-surveys.html">
-                        <ul class="field-list">
-                            <li>
-                                <label class="title">Email address</label>
-                                <input type="text" />
-                            </li>
-                            <li>
-                                <label class="title">Password</label>
-                                <input type="text" />
-                            </li>
-                            <li>
-                                <a class="link" href="">Forgot password?</a>
-                            </li>
-                        </ul>
-                        <div class="actions">
-                            <input class="btn btn-primary" value="Log In" type="submit" />
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-
-            {{> ../../templates/footer}}
-
+<div class="form-container">
+    <form action="my-surveys.html">
+        <ul class="field-list">
+            <li>
+                <label class="title">Email address</label>
+                <input type="text" />
+            </li>
+            <li>
+                <label class="title">Password</label>
+                <input type="text" />
+            </li>
+            <li>
+                <a class="link" href="">Forgot password?</a>
+            </li>
+        </ul>
+        <div class="actions">
+            <input class="btn btn-primary" value="Log In" type="submit" />
         </div>
-
-    </div>
-
-</body>
-</html>
+    </form>
+</div>

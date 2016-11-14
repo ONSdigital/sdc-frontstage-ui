@@ -24,9 +24,16 @@ config.templatesArr.forEach(file => {
 
 	var page = file.replace('.html', '');
 
+	if(page === 'register') {
+		console.log(fs.readFileSync('./mock-pages/src/' + page + '.html', 'utf8'));
+	}
+
 	gulp.task('compile:templates:' + page, () => {
-		return gulp.src('./mock-pages/src/' + file)
-			.pipe(mustache('./mock-pages/fixtures/' + page + '.json'))
+		return gulp.src('./templates/partials/html-page.mustache')
+			.pipe(mustache('./mock-pages/fixtures/' + page + '.json', {}, {
+				"content": fs.readFileSync('./mock-pages/src/' + page + '.html', 'utf8')
+			}))
+			.pipe(concat(page + '.html'))
 			.pipe(gulp.dest('./mock-pages/dist'));
 
 	});
@@ -50,8 +57,6 @@ gulp.task('watch:compile:sass', ['compile:sass'], () => {
 });
 
 gulp.task('webserver', () => {
-	console.log('Using port:' + portNumber);
-
 	gulp.src([
 		'./mock-pages/dist/',
 		'./dist/'

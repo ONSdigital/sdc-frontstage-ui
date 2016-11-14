@@ -1,44 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {{> ../../templates/head-misc}}
-    {{> ../../templates/head-dependencies}}
-</head>
-<body>
-    <div class="page">
+{{> ../../templates/page-header}}
 
-        {{> ../../templates/header}}
+<p>If you don't have an account, you can use your enrolment code to set one up.</p>
 
-        <div class="container">
-
-            <div class="page-content">
-
-                {{> ../../templates/page-header}}
-
-                <p>If you don't have an account, you can use your enrolment code to set one up.</p>
-
-                <div class="form-container">
-                    <form action="confirm-organisation-survey.html">
-                        <ul class="field-list">
-                            <li>
-                                <h5 class="title">Enrolment code</h5>
-                                <p>You'll find this in the letter we sent you</p>
-                                <input type="text" />
-                            </li>
-                        </ul>
-                        <div class="actions">
-                            <input class="btn btn-primary" value="Continue" type="submit" />
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-
-            {{> ../../templates/footer}}
-
+<div class="form-container">
+    <form action="confirm-organisation-survey.html">
+        <ul class="field-list">
+            <li>
+                <h5 class="title">Enrolment code</h5>
+                <p>You'll find this in the letter we sent you</p>
+                <input type="text" />
+            </li>
+        </ul>
+        <div class="actions">
+            <input class="btn btn-primary" value="Continue" type="submit" />
         </div>
-
-    </div>
-
-</body>
-</html>
+    </form>
+</div>

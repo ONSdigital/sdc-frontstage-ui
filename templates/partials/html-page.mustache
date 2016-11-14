@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> ../head-misc}}
+    {{> ../head-dependencies}}
+</head>
+<body>
+    <div class="page">
+
+        {{> ../header}}
+
+        <div class="container">
+
+            <div class="page-content">
+
+                {{#pageHeader}}
+                    {{> ../page-header}}
+                {{/pageHeader}}
+
+                <!-- Content -->
+                {{> content}}
+                <!-- End Content -->
+
+            </div>
+
+            {{> footer}}
+
+            {{#checkEmail}}
+            <div class="footer">
+                <p><a href="email.html">Check email</a></p>
+            </div>
+            {{/checkEmail}}
+
+        </div>
+
+    </div>
+</body>
+</html>
