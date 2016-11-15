@@ -24,12 +24,8 @@ config.templatesArr.forEach(file => {
 
 	var page = file.replace('.html', '');
 
-	if(page === 'register') {
-		console.log(fs.readFileSync('./mock-pages/src/' + page + '.html', 'utf8'));
-	}
-
 	gulp.task('compile:templates:' + page, () => {
-		return gulp.src('./templates/partials/html-page.mustache')
+		return gulp.src('./templates/html-page.mustache')
 			.pipe(mustache('./mock-pages/fixtures/' + page + '.json', {}, {
 				"content": fs.readFileSync('./mock-pages/src/' + page + '.html', 'utf8')
 			}))
