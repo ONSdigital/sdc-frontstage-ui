@@ -47,7 +47,7 @@ def get_organisations_token_and_data(login_token: str) -> Tuple[str, str]:
 
 def get_questionnaires_token_and_data(organisation_token: str, reporting_unit_ref: str) -> Tuple[str, str]:
     # call sdc-questionnaires - which returns the surveys
-    url = '{}/questionnaires?reference={}'.format(QUESTIONNAIRE_RESPONSE_HOST, reporting_unit_ref)
+    url = '{}/questionnaires/{}'.format(QUESTIONNAIRE_RESPONSE_HOST, reporting_unit_ref)
     response = requests.get(url, headers={'token': organisation_token})
     return response.json().get('token'), response.json().get('data')
 
