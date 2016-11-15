@@ -109,6 +109,12 @@ body {
   .details-list > li {
     margin-bottom: 1em; }
 
+.manage-account .profile-pic {
+  max-width: 250px; }
+
+.manage-account .actions {
+  margin-top: 20px; }
+
 .footer {
   padding: 1.5em;
   font-size: 14px; }

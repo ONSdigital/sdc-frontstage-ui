@@ -59,7 +59,8 @@ gulp.task('watch:compile:sass', ['compile:sass'], () => {
 gulp.task('webserver', () => {
 	gulp.src([
 		'./mock-pages/dist/',
-		'./dist/'
+		'./dist/',
+		'./images/'
 	])
 	.pipe(webserver({
 		//livereload: true,
