@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {{> ../head-misc}}
-    {{> ../head-dependencies}}
+    {{> partials/head-misc}}
+    {{> partials/head-dependencies}}
 </head>
 <body>
     <div class="page">
 
-        {{> ../header}}
+        {{> partials/header}}
 
         <div class="container">
 
             <div class="page-content">
 
                 {{#pageHeader}}
-                    {{> ../page-header}}
+                    {{> partials/page-header}}
                 {{/pageHeader}}
 
                 <!-- Content -->
@@ -23,7 +23,7 @@
 
             </div>
 
-            {{> footer}}
+            {{> partials/footer}}
 
             {{#checkEmail}}
             <div class="footer">

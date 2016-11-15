@@ -28,17 +28,8 @@
 <body>
     <div class="page">
 
-        <div class="main-logo-container">
-            <div class="container">
-                <a href="/mock-pages/dist/">
-                    <img class="main-logo" src="https://www.ons.gov.uk//assets/img/ons-logo.svg"
-                         alt="Office for National Statistics">
-                </a>
-                {{#user_name}}
-                    <a href="/logout">Log out {{user_name}}</a>
-                {{/user_name}}
-            </div>
-        </div>
+        {{> partials/header}}
+
         <div class="container">
 
             <div class="page-content">
@@ -72,9 +63,9 @@
                         </tbody>
                     </table>
                 </div>
-
-                {{> partials/footer}}
             </div>
+
+            {{> partials/footer}}
 
         </div>
 
