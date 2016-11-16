@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Manage your account</title><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+<title>Account Settings</title><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
 <link href="/site.min.css" type="text/css" rel="stylesheet" />
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script></head>
 <body>
-    <div class="page">
+    <div class="page account">
 
 
 <div class="main-logo-container">
@@ -18,17 +18,17 @@
             <img class="main-logo" src="https://www.ons.gov.uk//assets/img/ons-logo.svg" alt="Office for National Statistics">
         </a>
 
-        <a href="manage-account.html" class="logo-title">ONS Surveys</a>
+        <a href="/" class="logo-title">ONS Surveys</a>
 
         <div class="respondant-settings">
             <div class="btn-group" role="group">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
-                    David Johnson <span class="caret"></span>
+                    Charlotte Taylor <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
                     <li><a href="#">Help</a></li>
-                    <li><a href="manage-account.html">Account Settings</a></li>
+                    <li><a href="account.html">Account Settings</a></li>
                     <li><a href="#">Sign out</a></li>
                 </ul>
             </div>
@@ -39,26 +39,55 @@
 
             <div class="page-content">
 
-<h3>Manage your account</h3>
+<h3>Account Settings</h3>
                 <!-- Content -->
-<div class="manage-account">
+<div class="row accout-settings-field">
 
-    <div class="row">
-        <div class="col-sm-6">
-            <h4>David Johnson</h4>
-
-            <div class="profile-pic">
-                <img class="img-responsive" src="david.jpg" />
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="actions">
-                <h5>Actions</h5>
-                <p><a class="btn btn-primary" href="#">Change Password</a></p>
-            </div>
-        </div>
+    <div class="col-xs-12 col-sm-3">
+        <span>Name</span>
+    </div>
+    <div class="col-xs-12 col-sm-9">
+        <span>Charlotte Taylor</span>
+        <a href="" class="change">Change</a>
     </div>
 
+</div>
+<div class="row accout-settings-field">
+
+    <div class="col-xs-12 col-sm-3">
+        <span>Email address</span>
+    </div>
+    <div class="col-xs-12 col-sm-9">
+        <span>charlotte.taylor@ons.gov.uk</span>
+        <a href="" class="change">Change</a>
+    </div>
+
+</div>
+<div class="row accout-settings-field">
+
+    <div class="col-xs-12 col-sm-3">
+        <span>Password</span>
+    </div>
+    <div class="col-xs-12 col-sm-9">
+        <span>*******</span>
+        <a href="" class="change">Change</a>
+    </div>
+
+</div>
+<div class="row accout-settings-field">
+
+    <div class="col-xs-12 col-sm-3">
+        <span>Telephone</span>
+    </div>
+    <div class="col-xs-12 col-sm-9">
+        <span>01792 139457</span>
+        <a href="" class="change">Change</a>
+    </div>
+</div>
+
+<div class="actions">
+    <p><a class="btn btn-primary" href="#">Transfer account</a></p>
+    <p><a class="btn btn-primary" href="#">Delete account</a></p>
 </div>                <!-- End Content -->
 
             </div>
