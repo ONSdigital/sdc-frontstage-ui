@@ -16,7 +16,12 @@
             {{> partials/prototype-ribbon}}
         {{/userPrototype}}
 
-        {{> partials/header}}
+        {{#user}}
+            {{> partials/header-sim}}
+        {{/user}}
+        {{^user}}
+            {{> partials/header-non-sim}}
+        {{/user}}
 
         <div class="container">
 

@@ -130,6 +130,9 @@ body {
   .respondant-settings .dropdown-menu {
     right: 0;
     left: auto; }
+  .respondant-settings .help {
+    display: block;
+    margin-top: 8px; }
 
 .details-list {
   padding: 0;

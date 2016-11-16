@@ -1,5 +1,6 @@
 {
   "pageTitle" : "My Surveys",
   "pageHeader" : "My Surveys",
-  "pageClass" : "my-surveys"
+  "pageClass" : "my-surveys",
+  "user": {}
 }

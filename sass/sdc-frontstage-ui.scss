@@ -25,6 +25,8 @@ body {
         vertical-align : top;
         font-weight : normal;
     }
+
+
 }
 
 .ribbon {
@@ -192,6 +194,11 @@ body {
     .dropdown-menu {
         right : 0;
         left : auto;
+    }
+
+    .help {
+        display : block;
+        margin-top : 8px;
     }
 }
 
