@@ -5,9 +5,19 @@ body {
 .main-logo-container {
   padding: 15px 0;
   background-color: #fff; }
-
-.main-logo {
-  height: 39px; }
+  .main-logo-container .main-logo-wrap {
+    float: left;
+    display: inline-block;
+    width: 40px;
+    overflow: hidden; }
+  .main-logo-container .main-logo {
+    height: 39px; }
+  .main-logo-container .logo-title {
+    display: inline-block;
+    margin-left: 5px;
+    padding: 8px 0;
+    vertical-align: top;
+    font-weight: normal; }
 
 .ribbon {
   display: block;
@@ -80,29 +90,37 @@ body {
 .form-container .actions {
   margin-top: 1.5em; }
 
-.survey-list {
-  margin-top: 20px; }
-  .survey-list > h4 {
-    color: #3b7a9e; }
-  .survey-list + .survey-list {
-    margin-top: 2em; }
-  .survey-list table.survey-list-table {
-    width: 100%;
+.survey-list .nav-tabs {
+  margin-bottom: 20px; }
+  .survey-list .nav-tabs > li > a {
+    border: 1px solid #ddd; }
+  .survey-list .nav-tabs > li.active > a,
+  .survey-list .nav-tabs > li.active > a:hover {
+    border-bottom-color: transparent; }
+
+.survey-list > h4 {
+  color: #3b7a9e; }
+
+.survey-list + .survey-list {
+  margin-top: 2em; }
+
+.survey-list table.survey-list-table {
+  width: 100%;
+  border: 1px solid #eee;
+  border-left: none;
+  border-right: none; }
+  .survey-list table.survey-list-table th, .survey-list table.survey-list-table td {
+    padding: .5em; }
+  .survey-list table.survey-list-table th {
+    font-weight: 500; }
+  .survey-list table.survey-list-table td {
     border: 1px solid #eee;
     border-left: none;
     border-right: none; }
-    .survey-list table.survey-list-table th, .survey-list table.survey-list-table td {
-      padding: .5em; }
-    .survey-list table.survey-list-table th {
-      font-weight: 500; }
-    .survey-list table.survey-list-table td {
-      border: 1px solid #eee;
-      border-left: none;
-      border-right: none; }
-    .survey-list table.survey-list-table td:last-child {
-      width: 20px; }
-    .survey-list table.survey-list-table > thead {
-      background-color: #eee; }
+  .survey-list table.survey-list-table td:last-child {
+    width: 20px; }
+  .survey-list table.survey-list-table > thead {
+    background-color: #eee; }
 
 .survey-list-actions {
   margin-top: 20px; }
@@ -128,3 +146,14 @@ body {
 .footer {
   padding: 1.5em;
   font-size: 14px; }
+
+/**
+ * Page specific
+ */
+.my-surveys .page-content > h3 {
+  padding-bottom: 0;
+  border-bottom: none; }
+
+/**
+ * End page specific
+ */

@@ -6,10 +6,25 @@ body {
 .main-logo-container {
     padding : 15px 0;
     background-color : #fff;
-}
 
-.main-logo {
-    height : 39px;
+    .main-logo-wrap {
+        float : left;
+        display : inline-block;
+        width : 40px;
+        overflow : hidden;
+    }
+
+    .main-logo {
+        height : 39px;
+    }
+
+    .logo-title {
+        display : inline-block;
+        margin-left : 5px;
+        padding : 8px 0;
+        vertical-align : top;
+        font-weight : normal;
+    }
 }
 
 .ribbon {
@@ -112,7 +127,21 @@ body {
 }
 
 .survey-list {
-    margin-top : 20px;
+
+    .nav-tabs {
+        margin-bottom : 20px;
+
+        > li {
+            > a {
+                border : 1px solid #ddd;
+            }
+
+            &.active > a,
+            &.active > a:hover {
+                border-bottom-color : transparent;
+            }
+        }
+    }
 
     > h4 {
         color : #3b7a9e;
@@ -190,3 +219,18 @@ body {
     padding : 1.5em;
     font-size : 14px;
 }
+
+/**
+ * Page specific
+ */
+.my-surveys {
+    .page-content {
+        > h3 {
+            padding-bottom : 0;
+            border-bottom : none;
+        }
+    }
+}
+/**
+ * End page specific
+ */

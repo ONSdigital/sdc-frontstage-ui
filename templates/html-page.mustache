@@ -5,7 +5,12 @@
     {{> partials/head-dependencies}}
 </head>
 <body>
+    {{#pageClass}}
+    <div class="page {{pageClass}}">
+    {{/pageClass}}
+    {{^pageClass}}
     <div class="page">
+    {{/pageClass}}
 
         {{#userPrototype}}
             {{> partials/prototype-ribbon}}
