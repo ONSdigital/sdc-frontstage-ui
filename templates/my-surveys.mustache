@@ -10,20 +10,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <style>
-        th, td {
-            margin: 20px;
-            padding: 20px;
-            align: left;
-            font-weight: normal;
-            font-size: 1.4em;
-        }
-
-        th {
-            font-weight: 600;
-        }
-    </style>
 </head>
 <body>
     <div class="page">
@@ -36,35 +22,8 @@
 
             <div class="page-content">
 
-                <div class="survey-list">
-                    <h4>My surveys</h4>
-                    <table class="survey-list-table">
-                        <thead>
-                            <tr>
-                                <th>Reporting unit name</th>
-                                <th>Reporting unit ref</th>
-                                <th>Survey</th>
-                                <th>Period</th>
-                                <th>Status</th>
-                                <th>Return By</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {{#surveys}}
-                                <tr>
-                                    <td>{{ reporting_unit_name }}</td>
-                                    <td>{{ reporting_unit }}</td>
-                                    <td>{{ name }}</td>
-                                    <td>{{ period }}</td>
-                                    <td>STATUS</td>
-                                    <td>RETURN BY</td>
-                                    <td><a href="" class="btn btn-info">Start</a></td>
-                                </tr>
-                            {{/surveys}}
-                        </tbody>
-                    </table>
-                </div>
+                {{> partials/survey-list}}
+
             </div>
 
             {{> partials/footer}}

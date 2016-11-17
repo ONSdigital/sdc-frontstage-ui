@@ -27,10 +27,6 @@
 
             <div class="page-content">
 
-                {{#pageHeader}}
-                    {{> partials/page-header}}
-                {{/pageHeader}}
-
                 <!-- Content -->
                 {{> content}}
                 <!-- End Content -->
@@ -50,3 +46,9 @@
     </div>
 </body>
 </html>
+
+{{!Don't try this at home - workaround to registering every partial with gulp}}
+{{#templateRegister}}
+    {{> partials/page-header}}
+    {{> partials/survey-list}}
+{{/templateRegister}}

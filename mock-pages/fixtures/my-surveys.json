@@ -2,5 +2,23 @@
   "pageTitle" : "My Surveys",
   "pageHeader" : "My Surveys",
   "pageClass" : "my-surveys",
-  "user": {}
+  "user": {},
+  "surveys": [
+    {
+      "name": "Monthly Business Survey - Retail Sales Index",
+      "period": "October 2016",
+      "return_by": "30 Nov 2016",
+      "status": "Not started",
+      "survey_link": "/retail-sales-inquiry/index.htm",
+      "primaryAction": "Start survey"
+    },
+    {
+      "name": "Monthly Wages and Salaries Survey",
+      "period": "October 2016",
+      "return_by": "15 Dec 2016",
+      "status": "In progress",
+      "survey_link": "/monthly-wages-salaries/index.htm",
+      "primaryAction": "Continue survey"
+    }
+  ]
 }

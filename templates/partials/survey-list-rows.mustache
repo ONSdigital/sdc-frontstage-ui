@@ -1,10 +1,10 @@
 {{#surveys}}
     <tr>
-        <td>{{ reporting_unit_name }}</td>
-        <td>{{ reporting_unit }}</td>
-        <td>{{ name }}</td>
-        <td>{{ period }}</td>
-        <td>STATUS</td>
-        <td>RETURN BY</td>
+        <td>{{name}}</td>
+        <td><a class="btn btn-default" href="#">Info</a></td>
+        <td>{{period}}</td>
+        <td>{{return_by}}</td>
+        <td>{{status}}</td>
+        <td><a target="_blank" href="{{survey_link}}" class="btn btn-primary">{{primaryAction}}</a></td>
     </tr>
 {{/surveys}}
