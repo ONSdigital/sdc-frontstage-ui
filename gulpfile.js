@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 		templatesSrc: [
 			'./mock-pages/**/*.json',
 			'./templates/**/*.mustache',
-			'./mock-pages/**/*.html'
+			'./mock-pages/**/*.mustache'
 		],
 		outputDir: './dist',
 		templatesArr: fs.readdirSync('./mock-pages/src')
@@ -20,20 +20,44 @@ var gulp = require('gulp'),
 
 var portNumber = process.env.PORT || argv.port || 8181;
 
+/**
+ * Retrieve all partial mustache files
+ */
+var getPartials = () => {
+
+	var mustachePartialFiles = fs.readdirSync('./templates/partials'),
+		mustachePartials = {};
+
+	mustachePartialFiles.forEach((item) => {
+		var partial = item.replace('.mustache', '');
+		mustachePartials['partials/' + partial] = fs.readFileSync('./templates/partials/' + partial + '.mustache', 'utf8')
+	});
+
+	return mustachePartials;
+};
+
+/**
+ * Compile each page with JSON fixture
+ */
 config.templatesArr.forEach(file => {
 
-	var page = file.replace('.html', '');
+	var page = file.replace('.mustache', '');
 
 	gulp.task('compile:templates:' + page, () => {
 		return gulp.src('./templates/html-page.mustache')
-			.pipe(mustache('./mock-pages/fixtures/' + page + '.json', {}, {
-				"content": fs.readFileSync('./mock-pages/src/' + page + '.html', 'utf8')
-			}))
+
+			/**
+			 * Build mustache template, mix in partials
+			 */
+			.pipe(mustache('./mock-pages/fixtures/' + page + '.json', {}, Object.assign({
+				"content": fs.readFileSync('./mock-pages/src/' + page + '.mustache', 'utf8')
+			}, getPartials())))
+
 			.pipe(concat(page + '.html'))
 			.pipe(gulp.dest('./mock-pages/dist'));
-
 	});
 });
+
 
 gulp.task('compile:sass', () => {
 	return gulp.src(config.sassSrc)
@@ -42,11 +66,12 @@ gulp.task('compile:sass', () => {
 		.pipe(gulp.dest(config.outputDir))
 });
 
-var templateTasks = config.templatesArr.map(page => 'compile:templates:' + page.replace('.html', ''));
+var templateTasks = config.templatesArr.map(page => 'compile:templates:' + page.replace('.mustache', ''));
 
 gulp.task('watch:templates', templateTasks, () => {
 	gulp.watch(config.templatesSrc, templateTasks);
 });
+
 
 gulp.task('watch:compile:sass', ['compile:sass'], () => {
 	gulp.watch(config.sassSrc, ['compile:sass']);
@@ -73,6 +98,7 @@ gulp.task('test', [
 ], () => {
 
 });
+
 
 gulp.task('dev', [
 	'compile:sass',
