@@ -24,17 +24,13 @@ console.log('here process ', process.env);
 
 if (process.env.PAAS_PROVIDER === 'heroku') {
 
-	fs.writeFile("config.json", `
+	var configWrite = fs.writeFileSync("config.json", `
 		{
 			"testing": "123"
 		}
-	`, function(err) {
-		if(err) {
-			return console.log(err);
-		}
+	`);
 
-		console.log("Config file created");
-	});
+	console.log('Config result: ', configWrite);
 }
 
 /**
@@ -96,6 +92,7 @@ gulp.task('watch:compile:sass', ['compile:sass'], () => {
 
 gulp.task('webserver', () => {
 	gulp.src([
+		'.config.json',
 		'./mock-pages/dist/',
 		'./dist/',
 		'./eq-prototypes/'
