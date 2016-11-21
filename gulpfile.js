@@ -20,7 +20,22 @@ var gulp = require('gulp'),
 
 var portNumber = process.env.PORT || argv.port || 8181;
 
-console.log('here process ', process);
+console.log('here process ', process.env);
+
+if (process.env.PAAS_PROVIDER === 'heroku') {
+
+	fs.writeFile("config.json", `
+		{
+			"testing": "123"
+		}
+	`, function(err) {
+		if(err) {
+			return console.log(err);
+		}
+
+		console.log("Config file created");
+	});
+}
 
 /**
  * Retrieve all partial mustache files
