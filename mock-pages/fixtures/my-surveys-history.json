@@ -1,0 +1,17 @@
+{
+  "pageTitle" : "My Surveys",
+  "pageHeader" : "My Surveys",
+  "pageClass" : "my-surveys",
+  "user": {},
+  "surveys": [
+    {
+      "name": "Monthly Business Survey - Retail Sales Index",
+      "period": "October 2016",
+      "return_by": "31 Oct 2016",
+      "date_submitted": "14 Nov 2016",
+      "status": "Submitted",
+      "survey_link": "/retail-sales-inquiry/index.htm",
+      "primaryAction": "View survey"
+    }
+  ]
+}

@@ -1,13 +1,13 @@
 <div class="survey-list">
 
     <ul class="nav nav-tabs">
-        <li class="active" role="presentation">
-            <a href="#">
+        <li role="presentation">
+            <a href="/my-surveys.html">
                 To do
             </a>
         </li>
-        <li role="presentation">
-            <a href="my-surveys-history.html">
+        <li class="active" role="presentation">
+            <a href="#">
                 History
             </a>
         </li>
@@ -21,12 +21,12 @@
             <th></th>
             <th>Period</th>
             <th>Status</th>
-            <th>Return By</th>
+            <th>Date Submitted</th>
             <th></th>
         </tr>
         </thead>
         <tbody>
-        {{> partials/survey-list-rows}}
+        {{> partials/survey-history-list-rows}}
         </tbody>
     </table>
 </div>
