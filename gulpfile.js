@@ -20,7 +20,7 @@ var gulp = require('gulp'),
 
 var portNumber = process.env.PORT || argv.port || 8181;
 
-console.log(process);
+console.log('here process ', process);
 
 /**
  * Retrieve all partial mustache files
