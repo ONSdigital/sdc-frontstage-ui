@@ -110,17 +110,27 @@ body {
   border-left: none;
   border-right: none; }
   .survey-list table.survey-list-table th, .survey-list table.survey-list-table td {
-    padding: .5em; }
+    padding: .5em;
+    color: #111; }
   .survey-list table.survey-list-table th {
     font-weight: 500; }
   .survey-list table.survey-list-table td {
     border: 1px solid #eee;
     border-left: none;
     border-right: none; }
+  .survey-list table.survey-list-table tr:hover td {
+    background-color: #eee; }
   .survey-list table.survey-list-table td:last-child {
     width: 20px; }
   .survey-list table.survey-list-table > thead {
     background-color: #eee; }
+  .survey-list table.survey-list-table tr.inactive {
+    /*.btn-primary {
+                background-color : #999;
+                border : 1px solid #999;
+            }*/ }
+    .survey-list table.survey-list-table tr.inactive > td {
+      color: #666; }
 
 .survey-list-actions {
   margin-top: 20px; }

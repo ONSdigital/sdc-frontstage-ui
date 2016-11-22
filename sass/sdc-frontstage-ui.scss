@@ -161,6 +161,7 @@ body {
 
         th, td {
             padding : .5em;
+            color : #111;
         }
 
         th {
@@ -173,12 +174,29 @@ body {
             border-right : none;
         }
 
+        tr:hover {
+            td {
+                background-color : #eee;
+            }
+        }
+
         td:last-child {
             width : 20px;
         }
 
         > thead {
             background-color : #eee;
+        }
+
+        tr.inactive {
+            > td {
+                color : #666;
+            }
+
+            /*.btn-primary {
+                background-color : #999;
+                border : 1px solid #999;
+            }*/
         }
     }
 }

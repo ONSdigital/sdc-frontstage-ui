@@ -20,18 +20,6 @@ var gulp = require('gulp'),
 
 var portNumber = process.env.PORT || argv.port || 8181;
 
-console.log('here process ', process.env);
-
-if (process.env.PAAS_PROVIDER === 'heroku') {
-
-	var configWrite = fs.writeFileSync("config.json", `
-		{
-			"testing": "123"
-		}
-	`);
-
-	console.log('Config result: ', configWrite);
-}
 
 /**
  * Retrieve all partial mustache files
@@ -92,7 +80,6 @@ gulp.task('watch:compile:sass', ['compile:sass'], () => {
 
 gulp.task('webserver', () => {
 	gulp.src([
-		'.config.json',
 		'./mock-pages/dist/',
 		'./dist/',
 		'./eq-prototypes/'

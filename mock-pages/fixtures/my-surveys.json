@@ -5,12 +5,13 @@
   "user": {},
   "surveys": [
     {
-      "name": "Monthly Business Survey - Retail Sales Index",
-      "period": "October 2016",
-      "return_by": "30 Nov 2016",
-      "status": "Not started",
-      "survey_link": "/retail-sales-inquiry/index.htm",
-      "primaryAction": "Start survey"
+      "name": "Annual Survey Hours and Earnings",
+      "period": "2016",
+      "return_by": "31 Dec 2016",
+      "status": "Waiting for activation",
+      "survey_link": "/blank/index.html",
+      "primaryAction": "Use code to activate",
+      "inactive": "true"
     },
     {
       "name": "Monthly Wages and Salaries Survey",
