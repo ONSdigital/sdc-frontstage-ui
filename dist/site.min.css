@@ -118,7 +118,8 @@ body {
     border: 1px solid #eee;
     border-left: none;
     border-right: none; }
-  .survey-list table.survey-list-table tr:hover td {
+  .survey-list table.survey-list-table tr:hover td,
+  .survey-list table.survey-list-table tr.inactive:hover td {
     background-color: #eee; }
   .survey-list table.survey-list-table td:last-child {
     width: 20px; }
@@ -130,7 +131,8 @@ body {
                 border : 1px solid #999;
             }*/ }
     .survey-list table.survey-list-table tr.inactive > td {
-      color: #666; }
+      color: #666;
+      background-color: #f7f7f7; }
 
 .survey-list-actions {
   margin-top: 20px; }

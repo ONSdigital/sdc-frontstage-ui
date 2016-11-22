@@ -174,7 +174,9 @@ body {
             border-right : none;
         }
 
-        tr:hover {
+        tr:hover,
+        tr.inactive:hover {
+
             td {
                 background-color : #eee;
             }
@@ -191,6 +193,7 @@ body {
         tr.inactive {
             > td {
                 color : #666;
+                background-color : #f7f7f7;
             }
 
             /*.btn-primary {
