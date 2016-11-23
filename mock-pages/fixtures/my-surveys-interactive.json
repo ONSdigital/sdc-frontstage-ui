@@ -1,0 +1,25 @@
+{
+  "pageTitle" : "My Surveys",
+  "pageHeader" : "My Surveys",
+  "pageClass" : "my-surveys",
+  "user": {},
+  "surveys": [
+    {
+      "name": "Annual Survey Hours and Earnings",
+      "period": "2016",
+      "return_by": "31 Dec 2016",
+      "status": "Waiting for activation",
+      "survey_link": "/blank/index.html",
+      "primaryAction": "Use code to activate",
+      "inactive": "true"
+    },
+    {
+      "name": "Monthly Wages and Salaries Survey",
+      "period": "October 2016",
+      "return_by": "15 Dec 2016",
+      "status": "In progress",
+      "survey_link": "/monthly-wages-salaries/index.htm",
+      "primaryAction": "Continue survey"
+    }
+  ]
+}
