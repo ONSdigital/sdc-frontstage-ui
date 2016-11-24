@@ -35,7 +35,7 @@ def login_required(func: Callable) -> Callable:
 def get_login_token_and_data(email_address: str, password: str) -> Tuple[str, str]:
     # call sdc-login-user - which returns a token to be used in subsequent call
     # test data: 'florence.nightingale@example.com', 'password'
-    response = requests.post(LOGIN_ROOT_URL + '/login', json={'email': email_address, 'password': password},
+    response = requests.post(LOGIN_ROOT_URL + '/login', json={"email": email_address, "password": password},
                              headers={"Content-type": "application/json"})
     return response.json().get('token'), response.json().get('data')
 
