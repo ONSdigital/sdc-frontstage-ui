@@ -96,6 +96,12 @@ input[type=text] {
       background-color: #fff;
       border-color: #222;
       border-width: 1px; }
+    .form-container .field-list .field-item .field-item-radio[type="radio"] + label:before,
+    .form-container .field-list .field-item .field-item-radio[type="radio"] + label:after,
+    .form-container .field-list .field-item .field-item-checkbox[type="checkbox"] + label:before,
+    .form-container .field-list .field-item .field-item-checkbox[type="checkbox"] + label:after {
+      top: 10px;
+      left: 10px; }
     .form-container .field-list .field-item .field-item-radio,
     .form-container .field-list .field-item .field-item-checkbox {
       background: #eee none repeat scroll 0 0;
@@ -110,6 +116,8 @@ input[type=text] {
       width: 20px; }
     .form-container .field-list .field-item .field-item-label {
       display: block;
+      height: auto;
+      font-size: 16px;
       background: #eee none repeat scroll 0 0;
       border: 1px solid #fff;
       padding: 1rem;

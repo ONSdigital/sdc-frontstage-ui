@@ -131,6 +131,14 @@ input[type=text] {
                 border-width: 1px;
             }
 
+            .field-item-radio[type="radio"] + label:before,
+            .field-item-radio[type="radio"] + label:after,
+            .field-item-checkbox[type="checkbox"] + label:before,
+            .field-item-checkbox[type="checkbox"] + label:after{
+                top : 10px;
+                left : 10px;
+            }
+
             .field-item-radio,
             .field-item-checkbox {
                 background: #eee none repeat scroll 0 0;
@@ -147,6 +155,8 @@ input[type=text] {
 
             .field-item-label {
                 display : block;
+                height : auto;
+                font-size : 16px;
                 background: #eee none repeat scroll 0 0;
                 border: 1px solid #fff;
                 padding: 1rem;
