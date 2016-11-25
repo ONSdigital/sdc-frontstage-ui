@@ -11,9 +11,9 @@ import requests
 app = Flask(__name__)
 
 # constants
-LOGIN_HOST                  = os.getenv('LOGIN_HOST',                  'http://0.0.0.0:5009')
-ORGANISATION_HOST           = os.getenv('ORGANISATION_HOST',           'http://0.0.0.0:5010')
-QUESTIONNAIRE_RESPONSE_HOST = os.getenv('QUESTIONNAIRE_RESPONSE_HOST', 'http://0.0.0.0:5006')
+LOGIN_ROOT_URL                  = os.getenv('LOGIN_ROOT_URL',                  'http://localhost:5009')
+ORGANISATION_ROOT_URL           = os.getenv('ORGANISATION_ROOT_URL',           'http://localhost:5010')
+QUESTIONNAIRE_RESPONSE_ROOT_URL = os.getenv('QUESTIONNAIRE_RESPONSE_ROOT_URL', 'http://localhost:5006')
 
 
 @app.errorhandler(401)
@@ -35,19 +35,20 @@ def login_required(func: Callable) -> Callable:
 def get_login_token_and_data(email_address: str, password: str) -> Tuple[str, str]:
     # call sdc-login-user - which returns a token to be used in subsequent call
     # test data: 'florence.nightingale@example.com', 'password'
-    response = requests.post(LOGIN_HOST + '/login', json={'email': email_address, 'password': password})
+    response = requests.post(LOGIN_ROOT_URL + '/login', json={"email": email_address, "password": password},
+                             headers={"Content-type": "application/json"})
     return response.json().get('token'), response.json().get('data')
 
 
 def get_organisations_token_and_data(login_token: str) -> Tuple[str, str]:
     # call sdc-organisations - which returns a token to be used in subsequent call
-    response = requests.get(ORGANISATION_HOST + '/reporting_units', headers={'token': login_token})
+    response = requests.get(ORGANISATION_ROOT_URL + '/reporting_units', headers={'token': login_token})
     return response.json().get('token'), response.json().get('data')
 
 
 def get_questionnaires_token_and_data(organisation_token: str, reporting_unit_ref: str) -> Tuple[str, str]:
     # call sdc-questionnaires - which returns the surveys
-    url = '{}/questionnaires/{}'.format(QUESTIONNAIRE_RESPONSE_HOST, reporting_unit_ref)
+    url = '{}/questionnaires/{}'.format(QUESTIONNAIRE_RESPONSE_ROOT_URL, reporting_unit_ref)
     response = requests.get(url, headers={'token': organisation_token})
     return response.json().get('token'), response.json().get('data')
 

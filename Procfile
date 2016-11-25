@@ -1,1 +1,1 @@
-web: gulp test --port=$PORT
+web: python app.py
