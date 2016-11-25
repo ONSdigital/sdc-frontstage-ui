@@ -175,8 +175,6 @@ input[type=text] {
         background-color: #f7f7f7; }
   .survey-list.survey-list-interactive {
     /*.survey-list-interactive-head {
-            !*padding-left : 38px;
-            padding-right : 38px;*!
             padding-left : 15px;
             padding-right : 15px;
 
