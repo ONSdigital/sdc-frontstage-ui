@@ -1,60 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>My Surveys</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" />
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
-<link href="/site.min.css" type="text/css" rel="stylesheet" />
-<link rel="icon" href="favicon.ico" type="image/x-icon" />
-<link href="http://fonts.googleapis.com/icon?family=Material+Icons" type="text/css" rel="stylesheet" />
+{{> partials/page-header}}
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-    <div class="page my-surveys-interactive">
-
-
-<div class="main-logo-container">
-    <div class="container">
-        <a href="/" class="main-logo-wrap">
-            <img class="main-logo" src="https://www.ons.gov.uk//assets/img/ons-logo.svg" alt="Office for National Statistics">
-        </a>
-
-        <a href="/" class="logo-title">ONS Surveys</a>
-
-        <div class="respondant-settings">
-            <div class="btn-group" role="group">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Carol Davis <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Help</a></li>
-                    <li><a href="account.html">Account Settings</a></li>
-                    <li><a href="#">Sign out</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-        <div class="container">
-
-            <div class="page-content">
-
-                <!-- Content -->
-<style>
-    .material-icons {
-        display : none !important;
-    }
-</style>
-
-<h3>My Surveys</h3>
 <div class="survey-list survey-list-interactive">
 
-    <!--<h5>Office for National Statistics (ONS) [Reference no. 243957812]</h5>
+    <!--<h5>Office for National Statistics (ONS){{!reporting_unit_name}} [Reference no. 243957812{{!reporting_unit}}]</h5>
     <div class="survey-list-interactive-head">
         <div class="row survey-list-interactive-head-line">
             <div class="col-sm-3">
@@ -283,18 +231,3 @@
         </li>
     </ul>
 </div>
-                <!-- End Content -->
-
-            </div>
-
-<div class="footer">
-    <p>This service is an alpha version, which means it is a trial service.</p>
-    <p><a href="">Terms of Use</a> <a href="">Privacy Policy</a> <a href="">Copyright</a></p>
-    <p><a href="">Office for National Statistics main website</a> <a href="">National Statistics Publication Hub</a> <a href="">United Kingdom Statistics Authority</a></p>
-</div>
-
-        </div>
-
-    </div>
-</body>
-</html>
