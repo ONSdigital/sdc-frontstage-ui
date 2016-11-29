@@ -3,19 +3,19 @@
 
         <div class="card collapsible-header">
             <div class="card-content survey-header">
+                <small class="short-line">Survey due by: {{@value.return_by}}</small>
+
                 <div class="row">
                     <div class="col-sm-7">
-                        <strong class="card-title"><em><i class="material-icons">assessment</i> Survey:</em> {{@value.name}}</strong>
+                        <strong class="card-title"><em><i class="material-icons">assessment</i> </em> {{@value.name}}</strong>
                     </div>
                     <div class="col-sm-3">
-                        <span>Return by: {{@value.return_by}}</span>
+                        <span>{{@value.status}}</span>
                     </div>
                     <div class="col-sm-2">
                         <a target="_blank" href="{{@value.survey_link}}" class="btn btn-primary right">{{@value.primaryAction}}</a>
                     </div>
                 </div>
-
-                <p>{{@value.status}}</p>
 
                 <p class="reporting-unit"><strong>{{@value.reporting_unit}}</strong> [Reference no. {{@value.reporting_unit_ref}}]</p>
             </div>

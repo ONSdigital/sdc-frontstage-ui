@@ -3,10 +3,11 @@
 
         <div class="card collapsible-header">
             <div class="card-content survey-header">
+                <small class="short-line">Survey due by: {{@value.return_by}}</small>
+
                 <div class="row">
                     <div class="col-sm-7">
-                        <strong class="card-title"><em><i class="material-icons">assessment</i> Survey:</em> {{@value.name}}</strong><br />
-                        <span>Return by: {{@value.return_by}}</span>
+                        <strong class="card-title"><em><i class="material-icons">assessment</i></em> {{@value.name}}</strong><br />
                     </div>
                     <div class="col-sm-5">
                         <span>Enter activation code:</span>

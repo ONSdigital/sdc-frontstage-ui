@@ -196,6 +196,8 @@ input[type=text] {
         margin-top: 0;
         margin-bottom: 0;
         box-shadow: none; }
+        .survey-list.survey-list-interactive .survey-list-interactive-body > li .card .short-line {
+          font-weight: 500; }
         .survey-list.survey-list-interactive .survey-list-interactive-body > li .card .card-title {
           font-size: 18px; }
           .survey-list.survey-list-interactive .survey-list-interactive-body > li .card .card-title > em {

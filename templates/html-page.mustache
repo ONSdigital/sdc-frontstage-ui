@@ -38,76 +38,76 @@
                         /**
                          * Survey
                          */
-                            "name": "Annual Survey Hours and Earnings",
-                            "short_desc": "Data on levels, distribution and make-up of earnings and hours worked for UK employees by sex and full-time or part-time status in all industries and occupations.",
-                            "reporting_unit": "Office for National Statistics (ONS)",
-                            "reporting_unit_ref": "243957812",
-                            "period": "2016",
-                            "return_by": "31 Dec 2016",
-                            "status": "Waiting for activation",
-                            "survey_link": "/blank/index.html",
-                            "primaryAction": "Use code to activate"
-                        }
-                    },
-                    {
-                        "@metadata": {
-                            "id": "manual_2",
-                            "type": "survey",
-                            "template": "/partials/survey-item.mustache",
-                        },
-                        "@value": {
-
-                            /**
-                             * Survey
-                             */
-                            "name": "Monthly Wages and Salaries Survey",
-                            "reporting_unit": "Office for National Statistics (ONS)",
-                            "reporting_unit_ref": "243957812",
-                            "period": "October 2016",
-                            "return_by": "15 Dec 2016",
-                            "status": "Not Started",
-                            "survey_link": "/monthly-wages-salaries/index.htm",
-                            "primaryAction": "Start survey"
-                        }
-                    },
-                    {
-                        "@metadata": {
-                            "id": "manual_3",
-                            "type": "message",
-                            "template": "/partials/message-item.mustache",
-                        },
-                        "@value": {
-
-                            /**
-                             * Message
-                             */
-                            "subject": "You have a message regarding your Monthly Wages and Salaries Survey",
-                            "message": "<h2>Refinements needed for your monthly wages...</h2><p>We have questions regarding your monthly wage figures. Please can you take some time to review our comments below.</p><p>Message details...</p>"
-                        }
-                    },
-                    {
-                        "@metadata": {
-                            "id": "manual_4",
-                            "type": "survey",
-                            "template": "/partials/survey-item.mustache",
-                        },
-                        "@value": {
-
-                            /**
-                             * Survey
-                             */
-                            "name": "Monthly Wages and Salaries Survey",
-                            "reporting_unit": "Office for National Statistics (ONS)",
-                            "reporting_unit_ref": "243957812",
-                            "period": "October 2016",
-                            "return_by": "15 Dec 2016",
-                            "status": "In progress",
-                            "survey_link": "/monthly-wages-salaries/index.htm",
-                            "primaryAction": "Continue survey"
-                        }
+                        "name": "Annual Survey Hours and Earnings",
+                        "short_desc": "Data on levels, distribution and make-up of earnings and hours worked for UK employees by sex and full-time or part-time status in all industries and occupations.",
+                        "reporting_unit": "Office for National Statistics (ONS)",
+                        "reporting_unit_ref": "243957812",
+                        "period": "2016",
+                        "return_by": "31 Dec 2016",
+                        "status": "Waiting for activation",
+                        "survey_link": "/blank/index.html",
+                        "primaryAction": "Use code to activate"
                     }
-                ],
-                surveysList;
+                },
+                {
+                    "@metadata": {
+                        "id": "manual_2",
+                        "type": "survey",
+                        "template": "/partials/survey-item.mustache",
+                    },
+                    "@value": {
+
+                        /**
+                         * Survey
+                         */
+                        "name": "Monthly Wages and Salaries Survey",
+                        "reporting_unit": "Office for National Statistics (ONS)",
+                        "reporting_unit_ref": "243957812",
+                        "period": "October 2016",
+                        "return_by": "15 Dec 2016",
+                        "status": "Not Started",
+                        "survey_link": "/monthly-wages-salaries/index.htm",
+                        "primaryAction": "Start survey"
+                    }
+                },
+                {
+                    "@metadata": {
+                        "id": "manual_3",
+                        "type": "message",
+                        "template": "/partials/message-item.mustache",
+                    },
+                    "@value": {
+
+                        /**
+                         * Message
+                         */
+                        "subject": "You have a message regarding your Monthly Wages and Salaries Survey",
+                        "message": "<h2>Refinements needed for your monthly wages...</h2><p>We have questions regarding your monthly wage figures. Please can you take some time to review our comments below.</p><p>Message details...</p>"
+                    }
+                },
+                {
+                    "@metadata": {
+                        "id": "manual_4",
+                        "type": "survey",
+                        "template": "/partials/survey-item.mustache",
+                    },
+                    "@value": {
+
+                        /**
+                         * Survey
+                         */
+                        "name": "Monthly Wages and Salaries Survey",
+                        "reporting_unit": "Office for National Statistics (ONS)",
+                        "reporting_unit_ref": "243957812",
+                        "period": "October 2016",
+                        "return_by": "15 Dec 2016",
+                        "status": "In progress",
+                        "survey_link": "/monthly-wages-salaries/index.htm",
+                        "primaryAction": "Continue survey"
+                    }
+                }
+            ],
+            surveysList;
 
             if (!window.localStorage.getItem('surveys')) {
                 window.localStorage.setItem('surveys', JSON.stringify(surveysListDefault));
