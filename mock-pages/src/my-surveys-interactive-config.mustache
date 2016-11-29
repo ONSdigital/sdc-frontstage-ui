@@ -1,0 +1,271 @@
+<script>
+    var surveysCtrl = (function () {
+
+        var items = {},
+
+            itemTypes = {
+                survey: [
+                    {
+                        key: 'name',
+                        field_type: 'text'
+                    },
+                    {
+                        key: 'short_desc',
+                        field_type: 'textarea'
+                    },
+                    {
+                        key: 'reporting_unit',
+                        field_type: 'text'
+                    },
+                    {
+                        key: 'reporting_unit_ref',
+                        field_type: 'text'
+                    },
+                    {
+                        key: 'period',
+                        field_type: 'text'
+                    },
+                    {
+                        key: 'return_by',
+                        field_type: 'text'
+                    },
+                    {
+                        key: 'status',
+                        field_type: 'text'
+                    },
+                    {
+                        key: 'survey_link',
+                        field_type: 'text'
+                    },
+                    {
+                        key: 'primaryAction',
+                        field_type: 'text'
+                    }
+                ],
+                surveyInactive: [
+                    {
+                        key: 'name',
+                        field_type: 'text'
+                    },
+                    {
+                        key: 'short_desc',
+                        field_type: 'textarea'
+                    },
+                    {
+                        key: 'reporting_unit',
+                        field_type: 'text'
+                    },
+                    {
+                        key: 'reporting_unit_ref',
+                        field_type: 'text'
+                    },
+                    {
+                        key: 'period',
+                        field_type: 'text'
+                    },
+                    {
+                        key: 'return_by',
+                        field_type: 'text'
+                    },
+                    {
+                        key: 'status',
+                        field_type: 'text'
+                    },
+                    {
+                        key: 'survey_link',
+                        field_type: 'text'
+                    },
+                    {
+                        key: 'primaryAction',
+                        field_type: 'text'
+                    }
+                ],
+                message: [
+                    {
+                        key: 'subject',
+                        field_type: 'text'
+                    },
+                    {
+                        key: 'message',
+                        field_type: 'textarea'
+                    }
+                ]
+            },
+            itemTypePartials = {
+        	    survey: "/partials/survey-item.mustache",
+                surveyInactive: "/partials/survey-inactive-item.mustache",
+                message: "/partials/message-item.mustache"
+            };
+
+        function update() {
+        	console.log('============= UPDATE ==============');
+            items = JSON.parse(window.localStorage.getItem('surveys')) || [];
+
+            /**
+             * Completely refresh the UI
+             */
+            $('#survey-list-fields').html(
+                items.map(function (item) {
+                    return editableItem({
+                    	id: item['@metadata'].id,
+                    	type: item['@metadata'].type,
+                        existingValues: item['@value']
+                    });
+                }).join('')
+            );
+        }
+
+        function reset() {
+            window.localStorage.clear();
+            $('#survey-list-fields').html('');
+            update();
+        }
+
+        function newEditableItem (itemProfile) {
+
+        	return itemTypes[itemProfile.type].map(function (item) {
+
+                var field = '',
+                    fieldKey = Math.floor(Math.random() * 999999999999) + 1,
+                    val = itemProfile.existingValues ? itemProfile.existingValues[item.key] : '',
+                    valAttr = val ? 'value="' + val + '"' : '';
+
+                if (item.field_type === 'text') {
+                    field = '<input type="text" id="field_' + fieldKey + '" ' + valAttr + ' />';
+                }
+                else if (item.field_type === 'textarea') {
+                    field = '<textarea id="field_' + fieldKey + '">' + val + '</textarea>';
+                }
+
+                itemProfile.fields.push({
+                    key: item.key,
+                    field_key: 'field_' + fieldKey
+                });
+
+                return '<li>' +
+                    '<label>' + item.key + '</label>' +
+                    field +
+                '</li>';
+
+            }).join('');
+        }
+
+        function editableItem (itemData) {
+
+        	if(!itemData.type) {
+        		console.log('Item type not specified.');
+        		return false;
+            }
+
+            var itemProfile = {
+                id: itemData.id || 'item_' + Math.floor(Math.random() * 999999999999) + 1,
+                fields: []
+            };
+
+        	/**
+             * Override default values
+             */
+        	$.extend(itemProfile, itemData);
+
+            return '<ul class="survey-list-field-group" id="' + itemProfile.id + '">' +
+
+                newEditableItem(itemProfile) +
+
+                "<li><button class='btn btn-primary' onclick='return surveysCtrl.save(" + JSON.stringify(itemProfile) + ")'>Save</button></li>" +
+            '</ul>';
+        }
+
+        function saveItem(itemProfile) {
+
+        	var vals = {};
+
+        	itemProfile.fields.forEach(function (item) {
+                vals[item.key] = $('#' + item.field_key).val();
+            });
+
+        	if (itemProfile.existingValues) {
+
+                /**
+                 * Save changes to existing item
+                 */
+                items = items.map(function (item) {
+
+                	if (item['@metadata'].id === itemProfile.id) {
+                        item['@value'] = vals;
+                    }
+                	return item;
+                });
+            }
+            else{
+
+                /**
+                 * Save new item
+                 */
+                items.push({
+                    "@metadata": {
+                        id: itemProfile.id,
+                        template: itemTypePartials[itemProfile.type],
+                        type: itemProfile.type
+                    },
+                    "@value": vals
+                });
+            }
+
+            window.localStorage.setItem('surveys', JSON.stringify(items));
+
+            update();
+
+        	return false;
+        }
+
+        function addNewItem (type) {
+
+            $('#survey-list-fields').append(editableItem({
+            	type: type
+            }));
+        }
+
+        $(document).ready(update);
+
+        return {
+            add: addNewItem,
+            save: saveItem,
+            reset: reset
+        }
+
+    }());
+</script>
+
+<style>
+    select {
+        display : block;
+    }
+
+    .survey-list-field-group {
+        padding : 20px !important;
+        border : 1px solid #ccc;
+    }
+
+    .survey-list-field-group label {
+        float : left;
+    }
+</style>
+
+<button class="btn btn-primary right" onclick="surveysCtrl.reset()">Clear cache</button>
+
+<h4>Add item</h4>
+<div>
+    <select id="add-item">
+        <option value="survey">New survey</option>
+        <option value="surveyInactive">New inactive survey</option>
+        <option value="message">New message</option>
+    </select>
+    <button class="btn btn-primary" onclick="surveysCtrl.add($('#add-item').val())">Add</button>
+</div>
+<br />
+
+<form>
+    <div id="survey-list-fields">
+
+    </div>
+</form>

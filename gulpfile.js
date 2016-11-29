@@ -82,7 +82,8 @@ gulp.task('webserver', () => {
 	gulp.src([
 		'./mock-pages/dist/',
 		'./dist/',
-		'./eq-prototypes/'
+		'./eq-prototypes/',
+		'./templates/'
 	])
 	.pipe(webserver({
 		//livereload: true,

@@ -1,0 +1,81 @@
+<ul class="collapsible popout survey-list-interactive-body" data-collapsible="expandable">
+    <li class="survey-item">
+
+        <div class="card collapsible-header">
+            <div class="card-content survey-header">
+                <div class="row">
+                    <div class="col-sm-7">
+                        <strong class="card-title"><em><i class="material-icons">assessment</i> Survey:</em> {{@value.name}}</strong>
+                    </div>
+                    <div class="col-sm-3">
+                        <span>Return by: {{@value.return_by}}</span>
+                    </div>
+                    <div class="col-sm-2">
+                        <a target="_blank" href="{{@value.survey_link}}" class="btn btn-primary right">{{@value.primaryAction}}</a>
+                    </div>
+                </div>
+
+                <p>{{@value.status}}</p>
+
+                <p class="reporting-unit"><strong>{{@value.reporting_unit}}</strong> [Reference no. {{@value.reporting_unit_ref}}]</p>
+            </div>
+        </div>
+        <div class="card collapsible-body">
+
+            <h2>Monthly Wages and Salaries Survey</h2>
+            <ul class="survey-details">
+                <li class="row">
+                    <div class="col-sm-2">
+                        PERIOD
+                    </div>
+                    <div class="col-sm-10">
+                        October 2016
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="col-sm-2">
+                        BUSINESS
+                    </div>
+                    <div class="col-sm-10">
+                        Bolts and Rachets Ltd<br />
+                        23 Primrose Avenue<br />
+                        Hiddingbridge<br />
+                        Wessex<br />
+                        WE11 2DO
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="col-sm-2">
+                        DUE BY
+                    </div>
+                    <div class="col-sm-10">
+                        30 November 2016 (9 days left)
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="col-sm-2">
+                        STATUS
+                    </div>
+                    <div class="col-sm-10">
+                        Not started
+                    </div>
+                </li>
+            </ul>
+
+            <p>We will ask you to provide information for the business, including:</p>
+
+            <ul>
+                <li>value of total retail turnover</li>
+                <li>value of internet sales</li>
+                <li>numbers of employees</li>
+                <li>reasons for changes to figures</li>
+            </ul>
+
+            <p>If actual figures aren't available, please provide informed estimates.</p>
+
+            <a href="">Set reminder</a>
+
+        </div>
+
+    </li>
+</ul>
