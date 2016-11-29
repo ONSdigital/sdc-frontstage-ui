@@ -121,35 +121,6 @@
             update();
         }
 
-        function newEditableItem (itemProfile) {
-
-        	return itemTypes[itemProfile.type].map(function (item) {
-
-                var field = '',
-                    fieldKey = Math.floor(Math.random() * 999999999999) + 1,
-                    val = itemProfile.existingValues ? itemProfile.existingValues[item.key] : '',
-                    valAttr = val ? 'value="' + val + '"' : '';
-
-                if (item.field_type === 'text') {
-                    field = '<input type="text" id="field_' + fieldKey + '" ' + valAttr + ' />';
-                }
-                else if (item.field_type === 'textarea') {
-                    field = '<textarea id="field_' + fieldKey + '">' + val + '</textarea>';
-                }
-
-                itemProfile.fields.push({
-                    key: item.key,
-                    field_key: 'field_' + fieldKey
-                });
-
-                return '<li>' +
-                    '<label>' + item.key + '</label>' +
-                    field +
-                '</li>';
-
-            }).join('');
-        }
-
         function editableItem (itemData) {
 
         	if(!itemData.type) {
@@ -169,7 +140,31 @@
 
             return '<ul class="survey-list-field-group" id="' + itemProfile.id + '">' +
 
-                newEditableItem(itemProfile) +
+                itemTypes[itemProfile.type].map(function (item) {
+
+                    var field = '',
+                            fieldKey = Math.floor(Math.random() * 999999999999) + 1,
+                            val = itemProfile.existingValues ? itemProfile.existingValues[item.key] : '',
+                            valAttr = val ? 'value="' + val + '"' : '';
+
+                    if (item.field_type === 'text') {
+                        field = '<input type="text" id="field_' + fieldKey + '" ' + valAttr + ' />';
+                    }
+                    else if (item.field_type === 'textarea') {
+                        field = '<textarea id="field_' + fieldKey + '">' + val + '</textarea>';
+                    }
+
+                    itemProfile.fields.push({
+                        key: item.key,
+                        field_key: 'field_' + fieldKey
+                    });
+
+                    return '<li>' +
+                            '<label>' + item.key + '</label>' +
+                            field +
+                            '</li>';
+
+                }).join('') +
 
                 "<li><button class='btn btn-primary' onclick='return surveysCtrl.save(" + JSON.stringify(itemProfile) + ")'>Save</button></li>" +
             '</ul>';
@@ -241,9 +236,24 @@
         display : block;
     }
 
+    textarea {
+        height : 100px;
+    }
+
     .survey-list-field-group {
         padding : 20px !important;
+        text-align : right;
         border : 1px solid #ccc;
+    }
+
+    .survey-list-field-group li {
+        margin-bottom : 10px;
+        border-bottom : 1px dotted #ccc;
+    }
+
+    .survey-list-field-group input[type=text],
+    .survey-list-field-group textarea {
+        width : 50%;
     }
 
     .survey-list-field-group label {

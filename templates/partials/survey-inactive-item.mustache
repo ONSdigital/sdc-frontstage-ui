@@ -1,16 +1,24 @@
-<ul class="survey-list-interactive-body">
+<ul class="collapsible popout survey-list-interactive-body" data-collapsible="collapsible">
     <li class="survey-item survey-inactive">
 
-        <div class="card">
+        <div class="card collapsible-header">
             <div class="card-content survey-header">
                 <div class="row">
                     <div class="col-sm-7">
-                        <strong class="card-title"><em><i class="material-icons">assessment</i> Survey:</em> {{@value.name}}</strong>
-                    </div>
-                    <div class="col-sm-3">
+                        <strong class="card-title"><em><i class="material-icons">assessment</i> Survey:</em> {{@value.name}}</strong><br />
                         <span>Return by: {{@value.return_by}}</span>
                     </div>
-                    <div class="col-sm-2"></div>
+                    <div class="col-sm-5">
+                        <span>Enter activation code:</span>
+                        <div class="survey-actions">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="e.g. M32FFE3BG">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-warning" type="button">Activate</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <p class="survey-status">{{@value.status}}</p>
@@ -18,14 +26,6 @@
                 <p>{{@value.short_desc}}</p>
 
                 <p class="reporting-unit"><strong>{{@value.reporting_unit}} (ONS)</strong> [Reference no. {{@value.reporting_unit_ref}}]</p>
-            </div>
-            <div class="card-action survey-actions">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="e.g. M32FFE3BG">
-                    <span class="input-group-btn">
-                            <button class="btn btn-warning" type="button">Activate</button>
-                        </span>
-                </div>
             </div>
         </div>
 

@@ -173,128 +173,111 @@ input[type=text] {
       .survey-list table.survey-list-table tr.inactive > td {
         color: #666;
         background-color: #f7f7f7; }
-  .survey-list.survey-list-interactive {
-    /*.survey-list-interactive-head {
-            padding-left : 15px;
-            padding-right : 15px;
-
-            .survey-list-interactive-head-line {
-                border : 1px solid #d0d0d0;
-                background-color: #eee;
-
-                .title {
-                    display : inline-block;
-                    font-weight : 500;
-                    padding : .5em 0;
-                }
-            }
-        }*/ }
-    .survey-list.survey-list-interactive .card-content {
-      padding: 10px 20px; }
-    .survey-list.survey-list-interactive .survey-header {
-      border-bottom: 1px solid #ddd; }
-      .survey-list.survey-list-interactive .survey-header:after {
-        visibility: hidden;
-        display: block;
-        font-size: 0;
-        content: " ";
-        clear: both;
-        height: 0; }
-      .survey-list.survey-list-interactive .survey-header span {
-        line-height: 3rem; }
-    .survey-list.survey-list-interactive .survey-actions {
-      float: right;
-      max-width: 300px; }
-      .survey-list.survey-list-interactive .survey-actions:after {
-        visibility: hidden;
-        display: block;
-        font-size: 0;
-        content: " ";
-        clear: both;
-        height: 0; }
-      .survey-list.survey-list-interactive .survey-actions input[type=text] {
-        right: 15px;
-        padding: 2px;
-        padding-left: 10px;
-        box-shadow: none !important;
-        border: 1px solid #ccc !important; }
-      .survey-list.survey-list-interactive .survey-actions .input-group-btn > .btn {
+  .survey-list.survey-list-interactive .card-content {
+    padding: 10px 20px; }
+  .survey-list.survey-list-interactive .survey-header {
+    border-bottom: 1px solid #ddd; }
+    .survey-list.survey-list-interactive .survey-header:after {
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      content: " ";
+      clear: both;
+      height: 0; }
+    .survey-list.survey-list-interactive .survey-header span {
+      line-height: 3rem; }
+  .survey-list.survey-list-interactive .survey-list-interactive-body {
+    margin: 0; }
+    .survey-list.survey-list-interactive .survey-list-interactive-body > li {
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+      .survey-list.survey-list-interactive .survey-list-interactive-body > li p {
+        font-size: 14px; }
+      .survey-list.survey-list-interactive .survey-list-interactive-body > li .card {
+        margin-top: 0;
+        margin-bottom: 0;
         box-shadow: none; }
-    .survey-list.survey-list-interactive .survey-list-interactive-body {
-      margin: 0; }
-      .survey-list.survey-list-interactive .survey-list-interactive-body > li {
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
-        .survey-list.survey-list-interactive .survey-list-interactive-body > li p {
-          font-size: 14px; }
-        .survey-list.survey-list-interactive .survey-list-interactive-body > li .card {
-          margin-top: 0;
-          margin-bottom: 0;
+        .survey-list.survey-list-interactive .survey-list-interactive-body > li .card .card-title {
+          font-size: 18px; }
+          .survey-list.survey-list-interactive .survey-list-interactive-body > li .card .card-title > em {
+            font-style: normal;
+            color: #31b0d5; }
+        .survey-list.survey-list-interactive .survey-list-interactive-body > li .card.collapsible-header {
+          padding-left: 0;
+          padding-right: 0; }
+          .survey-list.survey-list-interactive .survey-list-interactive-body > li .card.collapsible-header .material-icons {
+            margin-right: .3em;
+            width: auto;
+            line-height: 2em;
+            font-size: 24px; }
+      .survey-list.survey-list-interactive .survey-list-interactive-body > li.message-item .collapsible-body > p {
+        margin-top: 1.5em;
+        padding: 0; }
+      .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item .card {
+        margin-top: 0;
+        margin-bottom: 0;
+        border-bottom: 1px solid #ccc; }
+        .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item .card:after {
+          visibility: hidden;
+          display: block;
+          font-size: 0;
+          content: " ";
+          clear: both;
+          height: 0; }
+        .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item .card.collapsible-header {
+          border-bottom: none; }
+        .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item .card .survey-header span {
+          display: inline-block;
+          margin-top: 10px;
+          font-size: 15px; }
+        .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item .card .survey-header .survey-actions:after {
+          visibility: hidden;
+          display: block;
+          font-size: 0;
+          content: " ";
+          clear: both;
+          height: 0; }
+        .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item .card .survey-header .survey-actions .input-group .input-group-btn {
+          display: table-cell;
+          margin-top: 0; }
+        .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item .card .survey-header .survey-actions input[type=text] {
+          padding: 2px;
+          padding-left: 10px;
+          box-shadow: none !important;
+          border: 1px solid #ccc !important; }
+        .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item .card .survey-header .survey-actions .input-group-btn > .btn {
           box-shadow: none; }
-          .survey-list.survey-list-interactive .survey-list-interactive-body > li .card .card-title {
-            font-size: 18px; }
-            .survey-list.survey-list-interactive .survey-list-interactive-body > li .card .card-title > em {
-              font-style: normal;
-              color: #31b0d5; }
-          .survey-list.survey-list-interactive .survey-list-interactive-body > li .card.collapsible-header {
-            padding-left: 0;
-            padding-right: 0; }
-            .survey-list.survey-list-interactive .survey-list-interactive-body > li .card.collapsible-header .material-icons {
-              margin-right: .3em;
-              width: auto;
-              line-height: 2em;
-              font-size: 24px; }
-        .survey-list.survey-list-interactive .survey-list-interactive-body > li.message-item .collapsible-body > p {
-          margin-top: 1.5em;
-          padding: 0; }
-        .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item .card {
-          margin-top: 0;
-          margin-bottom: 0;
-          border-bottom: 1px solid #ccc; }
-          .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item .card:after {
-            visibility: hidden;
-            display: block;
-            font-size: 0;
-            content: " ";
-            clear: both;
-            height: 0; }
-          .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item .card.collapsible-header {
-            border-bottom: none; }
-          .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item .card .survey-header span {
-            display: inline-block;
-            margin-top: 10px;
-            font-size: 15px; }
-          .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item .card .btn-primary {
-            margin-top: .6em; }
-        .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item.survey-inactive {
+        .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item .card .btn-primary {
+          margin-top: .6em; }
+      .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item.survey-inactive {
+        color: #666; }
+        .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item.survey-inactive label {
           color: #666; }
-          .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item.survey-inactive label {
-            color: #666; }
-          .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item.survey-inactive .card {
-            background-color: #f3f3f3; }
-          .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item.survey-inactive .reporting-unit {
-            margin-top: 1em;
-            margin-bottom: .5em; }
-          .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item.survey-inactive .survey-header .material-icons {
-            margin-top: -5px;
-            vertical-align: middle; }
-          .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item.survey-inactive .survey-status {
-            margin-top: .5em;
-            margin-bottom: 1em; }
-    .survey-list.survey-list-interactive .survey-list-interactive-body.popout {
-      margin-left: -24px;
-      margin-right: -24px; }
-    .survey-list.survey-list-interactive .collapsible-body {
-      padding: 20px;
-      background-color: #fff; }
-      .survey-list.survey-list-interactive .collapsible-body > .row {
-        margin-bottom: 1em; }
-      .survey-list.survey-list-interactive .collapsible-body > p {
-        padding-left: 0;
-        padding-right: 0; }
-    .survey-list.survey-list-interactive .row {
-      margin-bottom: 0; }
-    .survey-list.survey-list-interactive .survey-details > li {
+        .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item.survey-inactive .card {
+          background-color: #f3f3f3; }
+        .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item.survey-inactive .reporting-unit {
+          margin-top: 1em;
+          margin-bottom: .5em; }
+        .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item.survey-inactive .survey-header .material-icons {
+          margin-top: -5px;
+          vertical-align: middle; }
+        .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item.survey-inactive .survey-status {
+          margin-top: .5em;
+          margin-bottom: 1em; }
+  .survey-list.survey-list-interactive .survey-list-interactive-body.popout {
+    margin-left: -24px;
+    margin-right: -24px; }
+  .survey-list.survey-list-interactive .collapsible-body {
+    padding: 20px;
+    background-color: #fff; }
+    .survey-list.survey-list-interactive .collapsible-body > .row {
       margin-bottom: 1em; }
+    .survey-list.survey-list-interactive .collapsible-body > p {
+      padding-left: 0;
+      padding-right: 0; }
+  .survey-list.survey-list-interactive .row {
+    margin-bottom: 0; }
+  .survey-list.survey-list-interactive .survey-details > li {
+    margin-bottom: 1em; }
 
 .survey-list-actions {
   margin-top: 20px; }

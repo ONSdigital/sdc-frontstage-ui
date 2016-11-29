@@ -253,22 +253,6 @@ input[type=text] {
      */
     &.survey-list-interactive {
 
-        /*.survey-list-interactive-head {
-            padding-left : 15px;
-            padding-right : 15px;
-
-            .survey-list-interactive-head-line {
-                border : 1px solid #d0d0d0;
-                background-color: #eee;
-
-                .title {
-                    display : inline-block;
-                    font-weight : 500;
-                    padding : .5em 0;
-                }
-            }
-        }*/
-
         .card-content {
             padding : 10px 20px;
         }
@@ -287,32 +271,6 @@ input[type=text] {
 
             span {
                 line-height : 3rem;
-            }
-        }
-
-        .survey-actions {
-            float : right;
-            max-width : 300px;
-
-            &:after {
-                visibility: hidden;
-                display: block;
-                font-size: 0;
-                content: " ";
-                clear: both;
-                height: 0;
-            }
-
-            input[type=text] {
-                right : 15px;
-                padding : 2px;
-                padding-left : 10px;
-                box-shadow : none !important;
-                border : 1px solid #ccc !important;
-            }
-
-            .input-group-btn > .btn {
-                box-shadow : none;
             }
         }
 
@@ -390,6 +348,36 @@ input[type=text] {
                                 display : inline-block;
                                 margin-top : 10px;
                                 font-size : 15px;
+                            }
+
+                            .survey-actions {
+
+                                &:after {
+                                    visibility: hidden;
+                                    display: block;
+                                    font-size: 0;
+                                    content: " ";
+                                    clear: both;
+                                    height: 0;
+                                }
+
+                                .input-group {
+                                    .input-group-btn {
+                                        display : table-cell;
+                                        margin-top : 0;
+                                    }
+                                }
+
+                                input[type=text] {
+                                    padding : 2px;
+                                    padding-left : 10px;
+                                    box-shadow : none !important;
+                                    border : 1px solid #ccc !important;
+                                }
+
+                                .input-group-btn > .btn {
+                                    box-shadow : none;
+                                }
                             }
                         }
 

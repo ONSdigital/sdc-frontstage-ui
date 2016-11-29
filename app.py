@@ -10,7 +10,7 @@ import requests
 
 app = Flask(__name__)
 
-# constants
+PORT = int(os.environ.get('PORT', 5002))
 LOGIN_ROOT_URL                  = os.getenv('LOGIN_ROOT_URL',                  'http://localhost:5009')
 ORGANISATION_ROOT_URL           = os.getenv('ORGANISATION_ROOT_URL',           'http://localhost:5010')
 QUESTIONNAIRE_RESPONSE_ROOT_URL = os.getenv('QUESTIONNAIRE_RESPONSE_ROOT_URL', 'http://localhost:5006')
@@ -114,5 +114,4 @@ def css_endpoint() -> Response:
 
 if __name__ == '__main__':
     app.config['SECRET_KEY'] = 'ITSASECRET'
-    port = int(os.environ.get('PORT', 5002))
-    app.run(debug=True, host='0.0.0.0', port=port)
+    app.run(debug=True, host='0.0.0.0', port=PORT)
