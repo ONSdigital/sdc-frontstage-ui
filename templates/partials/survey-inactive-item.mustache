@@ -8,8 +8,10 @@
                 <div class="row">
                     <div class="col-sm-7">
                         <strong class="card-title"><em><i class="material-icons">assessment</i></em> {{@value.name}}</strong><br />
+                        <p class="reporting-unit">{{@value.reporting_unit}}</p>
                     </div>
                     <div class="col-sm-5">
+                        <p class="survey-status">{{@value.status}}</p>
                         <span>Enter activation code:</span>
                         <div class="survey-actions">
                             <div class="input-group">
@@ -21,13 +23,10 @@
                         </div>
                     </div>
                 </div>
-
-                <p class="survey-status">{{@value.status}}</p>
-
-                <p>{{@value.short_desc}}</p>
-
-                <p class="reporting-unit"><strong>{{@value.reporting_unit}} (ONS)</strong> [Reference no. {{@value.reporting_unit_ref}}]</p>
             </div>
+        </div>
+        <div class="card collapsible-body">
+            <p>{{@value.short_desc}}</p>
         </div>
 
     </li>

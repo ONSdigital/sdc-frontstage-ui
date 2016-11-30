@@ -15,9 +15,11 @@ body {
   .main-logo-container .logo-title {
     display: inline-block;
     margin-left: 5px;
-    padding: 8px 0;
+    padding: 4px 0;
+    font-size: 24px;
     vertical-align: top;
-    font-weight: normal; }
+    font-weight: 500;
+    color: #333; }
 
 .ribbon {
   display: block;
@@ -197,9 +199,13 @@ input[type=text] {
         margin-bottom: 0;
         box-shadow: none; }
         .survey-list.survey-list-interactive .survey-list-interactive-body > li .card .short-line {
-          font-weight: 500; }
+          display: block;
+          margin-bottom: -1em;
+          line-height: 2em;
+          font-weight: 400; }
         .survey-list.survey-list-interactive .survey-list-interactive-body > li .card .card-title {
-          font-size: 18px; }
+          font-size: 20px;
+          font-weight: 500; }
           .survey-list.survey-list-interactive .survey-list-interactive-body > li .card .card-title > em {
             font-style: normal;
             color: #31b0d5; }
@@ -245,26 +251,30 @@ input[type=text] {
           padding: 2px;
           padding-left: 10px;
           box-shadow: none !important;
-          border: 1px solid #ccc !important; }
+          border: 1px solid #ccc !important;
+          background-color: #fff; }
         .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item .card .survey-header .survey-actions .input-group-btn > .btn {
           box-shadow: none; }
         .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item .card .btn-primary {
           margin-top: .6em; }
       .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item.survey-inactive {
-        color: #666; }
+        color: #666;
+        /*.card {
+                            background-color : #f3f3f3;
+                        }*/
+        /*.reporting-unit {
+                            margin-top : 1em;
+                            margin-bottom : .5em;
+                            font-weight : 400;
+                        }*/ }
         .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item.survey-inactive label {
           color: #666; }
-        .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item.survey-inactive .card {
-          background-color: #f3f3f3; }
-        .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item.survey-inactive .reporting-unit {
-          margin-top: 1em;
-          margin-bottom: .5em; }
         .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item.survey-inactive .survey-header .material-icons {
           margin-top: -5px;
           vertical-align: middle; }
         .survey-list.survey-list-interactive .survey-list-interactive-body > li.survey-item.survey-inactive .survey-status {
           margin-top: .5em;
-          margin-bottom: 1em; }
+          /*margin-bottom : 1em;*/ }
   .survey-list.survey-list-interactive .survey-list-interactive-body.popout {
     margin-left: -24px;
     margin-right: -24px; }

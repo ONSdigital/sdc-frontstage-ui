@@ -21,9 +21,11 @@ body {
     .logo-title {
         display : inline-block;
         margin-left : 5px;
-        padding : 8px 0;
+        padding : 4px 0;
+        font-size : 24px;
         vertical-align : top;
-        font-weight : normal;
+        font-weight : 500;
+        color : #333;
     }
 }
 
@@ -290,11 +292,15 @@ input[type=text] {
                     box-shadow: none;
 
                     .short-line {
-                        font-weight : 500;
+                        display : block;
+                        margin-bottom : -1em;
+                        line-height: 2em;
+                        font-weight : 400;
                     }
 
                     .card-title {
-                        font-size : 18px;
+                        font-size : 20px;
+                        font-weight : 500;
 
                         > em {
                             font-style : normal;
@@ -377,6 +383,7 @@ input[type=text] {
                                     padding-left : 10px;
                                     box-shadow : none !important;
                                     border : 1px solid #ccc !important;
+                                    background-color : #fff;
                                 }
 
                                 .input-group-btn > .btn {
@@ -397,14 +404,15 @@ input[type=text] {
                             color : #666;
                         }
 
-                        .card {
+                        /*.card {
                             background-color : #f3f3f3;
-                        }
+                        }*/
 
-                        .reporting-unit {
+                        /*.reporting-unit {
                             margin-top : 1em;
                             margin-bottom : .5em;
-                        }
+                            font-weight : 400;
+                        }*/
 
                         .survey-header {
                             .material-icons {
@@ -415,7 +423,7 @@ input[type=text] {
 
                         .survey-status {
                             margin-top : .5em;
-                            margin-bottom : 1em;
+                            /*margin-bottom : 1em;*/
                         }
                     }
                 }
