@@ -1,33 +1,33 @@
-<ul class="collapsible popout survey-list-interactive-body" data-collapsible="collapsible">
-    <li class="survey-item survey-inactive">
+<li class="collapsible popout survey-list-interactive-body survey-item survey-inactive">
 
-        <div class="card collapsible-header">
-            <div class="card-content survey-header">
-                <small class="short-line">Survey due by: {{@value.return_by}}</small>
+    <div class="card collapsible-header">
+        <div class="card-content survey-header">
+            <small class="short-line">Survey due by: {{@value.return_by}}</small>
 
-                <div class="row">
-                    <div class="col-sm-7">
-                        <strong class="card-title"><em><i class="material-icons">assessment</i></em> {{@value.name}}</strong><br />
-                        <p class="reporting-unit">{{@value.reporting_unit}}</p>
-                    </div>
-                    <div class="col-sm-5">
-                        <p class="survey-status">{{@value.status}}</p>
-                        <span>Enter activation code:</span>
-                        <div class="survey-actions">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="e.g. M32FFE3BG">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-warning" type="button">Activate</button>
-                                </span>
-                            </div>
+            <div class="row">
+                <div class="col-sm-7">
+                    <strong class="card-title"><em><i class="material-icons">assessment</i></em> {{@value.name}}</strong><br />
+                    <p class="reporting-unit">{{@value.reporting_unit}}</p>
+                </div>
+                <div class="col-sm-5">
+                    <p class="survey-status">{{@value.status}}</p>
+                    <span>Enter activation code:</span>
+                    <div class="survey-actions">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="e.g. M32FFE3BG">
+                            <span class="input-group-btn">
+                                <button class="btn btn-warning" type="button">Activate</button>
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card collapsible-body">
+    </div>
+    <div class="card collapsible-body">
+        <div class="card-content">
             <p>{{@value.short_desc}}</p>
         </div>
+    </div>
 
-    </li>
-</ul>
+</li>

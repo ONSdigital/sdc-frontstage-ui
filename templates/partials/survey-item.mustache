@@ -1,81 +1,30 @@
-<ul class="collapsible popout survey-list-interactive-body" data-collapsible="collapsible">
-    <li class="survey-item">
+<li class="collapsible popout survey-item survey-list-interactive-body">
 
-        <div class="card collapsible-header">
-            <div class="card-content survey-header">
-                <small class="short-line">Survey due by: {{@value.return_by}} (15 days left)</small>
+    <div class="card collapsible-header">
+        <div class="card-content survey-header">
+            <small class="short-line">Survey due by: {{@value.return_by}} (15 days left)</small>
 
-                <div class="row">
-                    <div class="col-sm-7">
-                        <strong class="card-title"><em><i class="material-icons">assessment</i> </em> {{@value.name}}</strong>
-                    </div>
-                    <div class="col-sm-3">
-                        <span>{{@value.status}}</span>
-                    </div>
-                    <div class="col-sm-2">
-                        <a target="_blank" href="{{@value.survey_link}}" class="btn btn-primary right">{{@value.primaryAction}}</a>
-                    </div>
+            <div class="row">
+                <div class="col-sm-7">
+                    <strong class="card-title"><em><i class="material-icons">assessment</i> </em> {{@value.name}}</strong>
                 </div>
-
-                <p class="reporting-unit">{{@value.reporting_unit}}</p>
+                <div class="col-sm-3">
+                    <span>{{@value.status}}</span>
+                </div>
+                <div class="col-sm-2">
+                    <a target="_blank" href="{{@value.survey_link}}" class="btn btn-primary right">{{@value.primaryAction}}</a>
+                </div>
             </div>
+
+            <p class="reporting-unit">{{@value.reporting_unit}}</p>
         </div>
-        <div class="card collapsible-body">
+    </div>
+    <div class="card collapsible-body">
 
-            <h2>Monthly Wages and Salaries Survey</h2>
-            <ul class="survey-details">
-                <li class="row">
-                    <div class="col-sm-2">
-                        PERIOD
-                    </div>
-                    <div class="col-sm-10">
-                        October 2016
-                    </div>
-                </li>
-                <li class="row">
-                    <div class="col-sm-2">
-                        BUSINESS
-                    </div>
-                    <div class="col-sm-10">
-                        Bolts and Rachets Ltd<br />
-                        23 Primrose Avenue<br />
-                        Hiddingbridge<br />
-                        Wessex<br />
-                        WE11 2DO
-                    </div>
-                </li>
-                <!--<li class="row">
-                    <div class="col-sm-2">
-                        DUE BY
-                    </div>
-                    <div class="col-sm-10">
-                        30 November 2016 (9 days left)
-                    </div>
-                </li>
-                <li class="row">
-                    <div class="col-sm-2">
-                        STATUS
-                    </div>
-                    <div class="col-sm-10">
-                        Not started
-                    </div>
-                </li>-->
-            </ul>
-
-            <p>We will ask you to provide information for the business, including:</p>
-
-            <ul>
-                <li>value of total retail turnover</li>
-                <li>value of internet sales</li>
-                <li>numbers of employees</li>
-                <li>reasons for changes to figures</li>
-            </ul>
-
-            <p>If actual figures aren't available, please provide informed estimates.</p>
-
-            <a href="">Set reminder</a>
-
+        <div class="card-content">
+            {{{@value.survey_details}}}
         </div>
 
-    </li>
-</ul>
+    </div>
+
+</li>
