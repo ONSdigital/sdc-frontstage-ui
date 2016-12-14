@@ -53,6 +53,11 @@ def get_questionnaires_token_and_data(organisation_token: str, reporting_unit_re
     return response.json().get('token'), response.json().get('data')
 
 
+@app.route('/', methods=['GET'])
+def bounce() -> Response:
+    return redirect("/login")
+
+
 @app.route('/login', methods=['GET'])
 def get_login_endpoint() -> Response:
     user_name = session.get('data', {}).get('name')
