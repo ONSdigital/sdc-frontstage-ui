@@ -11,7 +11,8 @@
       "status": "Waiting for activation",
       "survey_link": "/blank/index.html",
       "primaryAction": "Use code to activate",
-      "inactive": "true"
+      "inactive": "true",
+      "surveyDetails": "<h2>Annual Survey Hours and Earnings</h2><ul class='survey-details'><li class='row'><div class='col-sm-2'>PERIOD</div><div class='col-sm-10'>October 2016</div></li><li class='row'><div class='col-sm-2'>BUSINESS</div><div class='col-sm-10'>Bolts and Rachets Ltd<br />23 Primrose Avenue<br />Hiddingbridge<br />Wessex<br />WE11 2DO</div></li><li class='row'><div class='col-sm-2'>DUE BY</div><div class='col-sm-10'>30 November 2016 (9 days left)</div></li><li class='row'><div class='col-sm-2'>STATUS</div><div class='col-sm-10'>Not started</div></li></ul><p>We will ask you to provide information for the business, including:</p><ul><li>value of total retail turnover</li><li>value of internet sales</li><li>numbers of employees</li><li>reasons for changes to figures</li></ul><p>If actual figures are not available, please provide informed estimates.</p><a href=''>Set reminder</a>"
     },
     {
       "name": "Monthly Wages and Salaries Survey",
@@ -19,7 +20,8 @@
       "return_by": "15 Dec 2016",
       "status": "In progress",
       "survey_link": "/monthly-wages-salaries/index.htm",
-      "primaryAction": "Continue survey"
+      "primaryAction": "Continue survey",
+      "surveyDetails": "<h2>Monthly Wages and Salaries Survey</h2><ul class='survey-details'><li class='row'><div class='col-sm-2'>PERIOD</div><div class='col-sm-10'>October 2016</div></li><li class='row'><div class='col-sm-2'>BUSINESS</div><div class='col-sm-10'>Bolts and Rachets Ltd<br />23 Primrose Avenue<br />Hiddingbridge<br />Wessex<br />WE11 2DO</div></li><li class='row'><div class='col-sm-2'>DUE BY</div><div class='col-sm-10'>30 November 2016 (9 days left)</div></li><li class='row'><div class='col-sm-2'>STATUS</div><div class='col-sm-10'>Not started</div></li></ul><p>We will ask you to provide information for the business, including:</p><ul><li>value of total retail turnover</li><li>value of internet sales</li><li>numbers of employees</li><li>reasons for changes to figures</li></ul><p>If actual figures are not available, please provide informed estimates.</p><a href=''>Set reminder</a>"
     }
   ]
 }

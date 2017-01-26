@@ -1,10 +1,17 @@
 {{#surveys}}
-    <tr>
+    <tr class="survey-line">
         <td>{{name}}</td>
         <!--<td><a class="btn btn-default" href="#">Info</a></td>-->
         <td>{{period}}</td>
         <td>{{status}}</td>
         <td>{{return_by}}</td>
         <td><a target="_blank" href="{{survey_link}}" class="btn btn-primary">{{primaryAction}}</a></td>
+    </tr>
+    <tr class="survey-line-expanded">
+        <td colspan="5">
+            <div class="survey-line-expanded-wrap">
+                {{{surveyDetails}}}
+            </div>
+        </td>
     </tr>
 {{/surveys}}

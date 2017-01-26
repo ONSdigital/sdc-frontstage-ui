@@ -1,9 +1,9 @@
 {{#surveys}}
     {{#inactive}}
-    <tr class="inactive">
+    <tr class="survey-line inactive">
     {{/inactive}}
     {{^inactive}}
-    <tr>
+    <tr class="survey-line">
     {{/inactive}}
         <td>{{name}}</td>
         <!--<td><a class="btn btn-default" href="#">Info</a></td>-->
@@ -16,5 +16,12 @@
         {{^inactive}}
         <td><a target="_blank" href="{{survey_link}}" class="btn btn-primary">{{primaryAction}}</a></td>
         {{/inactive}}
+    </tr>
+    <tr class="survey-line-expanded">
+        <td colspan="5">
+            <div class="survey-line-expanded-wrap">
+                {{{surveyDetails}}}
+            </div>
+        </td>
     </tr>
 {{/surveys}}

@@ -26,6 +26,27 @@
 
 </script>
 
+    <!-- My surveys -->
+    <script>
+        $(document).ready(function () {
+
+            $('.survey-line-expanded-wrap').hide();
+
+            $('.survey-rows').find('tr.survey-line').on('click', function() {
+
+                var expandedTarget = '.survey-line-expanded',
+                        expandedTargetWrap = '.survey-line-expanded-wrap',
+                        nextExpanded = $(this).next(expandedTarget),
+                        speed = 300;
+
+                $(this).siblings(expandedTarget).not(nextExpanded).find(expandedTargetWrap).slideUp(speed);
+
+                nextExpanded.find(expandedTargetWrap).slideToggle(speed);
+
+            });
+        });
+    </script>
+
     <script>
         var partialsRegister = {};
 
@@ -274,7 +295,7 @@
 <div class="main-logo-container">
     <div class="container">
         <a href="/" class="main-logo-wrap">
-            <img class="main-logo" src="https://www.ons.gov.uk//assets/img/ons-logo.svg" alt="Office for National Statistics">
+            <img class="main-logo" src="https://cdn.ons.gov.uk/assets/images/ons-logo.svg" alt="Office for National Statistics">
         </a>
 
         <a href="/" class="logo-title">ONS Surveys</a>
@@ -328,14 +349,21 @@
             <th></th>
         </tr>
         </thead>
-        <tbody>
-    <tr>
+        <tbody class="survey-rows">
+    <tr class="survey-line">
         <td>Monthly Business Survey - Retail Sales Index</td>
         <!--<td><a class="btn btn-default" href="#">Info</a></td>-->
         <td>September 2016</td>
         <td>Completed</td>
         <td>31 Oct 2016</td>
         <td><a target="_blank" href="&#x2F;retail-sales-inquiry&#x2F;index.htm" class="btn btn-primary">View survey</a></td>
+    </tr>
+    <tr class="survey-line-expanded">
+        <td colspan="5">
+            <div class="survey-line-expanded-wrap">
+                <h2>Monthly Business Survey - Retail Sales Index</h2><ul class='survey-details'><li class='row'><div class='col-sm-2'>PERIOD</div><div class='col-sm-10'>October 2016</div></li><li class='row'><div class='col-sm-2'>BUSINESS</div><div class='col-sm-10'>Bolts and Rachets Ltd<br />23 Primrose Avenue<br />Hiddingbridge<br />Wessex<br />WE11 2DO</div></li><li class='row'><div class='col-sm-2'>DUE BY</div><div class='col-sm-10'>30 November 2016 (9 days left)</div></li><li class='row'><div class='col-sm-2'>STATUS</div><div class='col-sm-10'>Not started</div></li></ul><p>We will ask you to provide information for the business, including:</p><ul><li>value of total retail turnover</li><li>value of internet sales</li><li>numbers of employees</li><li>reasons for changes to figures</li></ul><p>If actual figures are not available, please provide informed estimates.</p><a href=''>Set reminder</a>
+            </div>
+        </td>
     </tr>
         </tbody>
     </table>

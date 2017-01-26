@@ -4,6 +4,27 @@
     {{> partials/head-misc}}
     {{> partials/head-dependencies}}
 
+    <!-- My surveys -->
+    <script>
+        $(document).ready(function () {
+
+            $('.survey-line-expanded-wrap').hide();
+
+            $('.survey-rows').find('tr.survey-line').on('click', function() {
+
+                var expandedTarget = '.survey-line-expanded',
+                        expandedTargetWrap = '.survey-line-expanded-wrap',
+                        nextExpanded = $(this).next(expandedTarget),
+                        speed = 300;
+
+                $(this).siblings(expandedTarget).not(nextExpanded).find(expandedTargetWrap).slideUp(speed);
+
+                nextExpanded.find(expandedTargetWrap).slideToggle(speed);
+
+            });
+        });
+    </script>
+
     <script>
         var partialsRegister = {};
 

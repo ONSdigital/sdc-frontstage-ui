@@ -248,6 +248,20 @@ input[type=text] {
                 border : 1px solid #999;
             }*/
         }
+
+        .survey-line {
+            cursor : pointer;
+        }
+
+        .survey-line-expanded > td {
+            padding-top: 0;
+            padding-bottom: 0;
+
+            .survey-line-expanded-wrap {
+                padding-top : .5em;
+                padding-bottom : .5em;
+            }
+        }
     }
 
     /**

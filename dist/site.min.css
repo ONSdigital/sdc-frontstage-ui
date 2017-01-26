@@ -175,6 +175,14 @@ input[type=text] {
       .survey-list table.survey-list-table tr.inactive > td {
         color: #666;
         background-color: #f7f7f7; }
+    .survey-list table.survey-list-table .survey-line {
+      cursor: pointer; }
+    .survey-list table.survey-list-table .survey-line-expanded > td {
+      padding-top: 0;
+      padding-bottom: 0; }
+      .survey-list table.survey-list-table .survey-line-expanded > td .survey-line-expanded-wrap {
+        padding-top: .5em;
+        padding-bottom: .5em; }
   .survey-list.survey-list-interactive .card-content {
     padding: 10px 20px; }
   .survey-list.survey-list-interactive .survey-header {
